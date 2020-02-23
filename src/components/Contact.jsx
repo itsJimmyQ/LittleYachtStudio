@@ -64,13 +64,14 @@ const Subheading = styled.h2`
 const Heading = styled.h1`
     color: white;
     font-weight: 600;
-    font-size: 2.2em;
+    font-size: 2em;
+    margin-bottom: 10px;
 `
 
 const Description = styled.p`
     color: white;
     font-weight: 300;
-    font-size: 0.9em;
+    font-size: 1em;
     width: 60%;
 `
 
@@ -89,13 +90,13 @@ const ContactSubsection = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
     width: 60%;
 `
 
 const Label = styled.label`
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: white;
     opacity: 0.5;
     font-weight: 500;

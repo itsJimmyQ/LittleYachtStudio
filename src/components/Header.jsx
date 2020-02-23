@@ -22,6 +22,9 @@ class Header extends Component {
 export default Header;
 
 const Container = styled.div`
+  position: fixed;
+  top: 0;
+  z-index: 999;
   font-family: "Poppins", sans-serif;
   display: flex;
   background-color: white;
@@ -31,7 +34,7 @@ const Container = styled.div`
   height: 15vh;
   width: 100%;
   padding: 0 6%;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16);
   margin-bottom: 6vh;
 `;
 
@@ -44,11 +47,11 @@ const LogoAlt = styled.h1`
   /* color: black; */
   margin: 0;
   font-weight: 300;
-  font-size: 1.8em;
+  font-size: 2em;
 `
 
 const Bold = styled.span`
-  font-weight: 600;
+  font-weight: 900;
 `
 
 const NavLinkContainer = styled.div`
@@ -57,7 +60,7 @@ const NavLinkContainer = styled.div`
 `
 
 const NavLink = styled.span`
-  font-size: 0.9em;
+  font-size: 1em;
   letter-spacing: 1px;
   margin: 0 12px;
   a {

@@ -28,7 +28,7 @@ const Container = styled.section`
 `
 const Card = styled.div`
     height: 100%;
-    width: 350px;
+    width: 400px;
     margin: 0 10px;
     background-color: #ddd;
 `

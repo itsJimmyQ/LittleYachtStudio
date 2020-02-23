@@ -9,9 +9,9 @@ class Footer extends Component {
                     <LogoAlt><b>Little Yacht</b> studio</LogoAlt>
                     <InfoSection>
                         <Info> (+31) 0636 067 350 </Info>
-                        <Info></Info>
-                        <Info> littleyachtstudio@gmail.com </Info>
                         <Info> Eindhoven, The Netherlands. </Info>
+                        <Info> littleyachtstudio@gmail.com </Info>
+                        <Info> Created by <a href="https://www.linkedin.com/in/longxiang-qian-38b381188/">Longxiang Qian</a> </Info>                        
                     </InfoSection>
 
                 </Wrapper>
@@ -40,7 +40,7 @@ const LogoAlt = styled.h1`
   /* color: black; */
   margin: 0;
   font-weight: 300;
-  font-size: 1.8em;
+  font-size: 2em;
 `
 const InfoSection = styled.section`
     margin-top: 5%;
@@ -53,7 +53,7 @@ const InfoSection = styled.section`
 `
 const Info = styled.h3`
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1em;
   margin-bottom: 0px;
 `

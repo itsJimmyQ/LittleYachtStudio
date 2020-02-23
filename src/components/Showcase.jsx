@@ -24,5 +24,5 @@ const Container = styled.section`
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 5vw;
-    grid-column-gap: 5vh;
+    grid-column-gap: 10vw;
 `

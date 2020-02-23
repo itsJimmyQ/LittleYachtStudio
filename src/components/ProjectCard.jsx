@@ -20,7 +20,7 @@ class ProjectCard extends Component {
 export default ProjectCard;
 
 const Container = styled.div`
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,7 @@ const Container = styled.div`
 `;
 
 const CardThumbnail = styled.div`
-    height: 80%;
+    height: 90%;
     width: 100%;
     background-color: #28282A;
     opacity: 0.3;
@@ -42,7 +42,7 @@ const CardHeading = styled.h2`
 const CardDesc = styled.p`
     font-family: "Montserrat", sans-serif;
     font-size: 1em;
-    /* color: black; */
+    font-weight: 500;
     display: flex;
     margin: 0;
 `;

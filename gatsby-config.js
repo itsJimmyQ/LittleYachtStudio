@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Little Yacht studio`,
+    description: `A portrait & interior photography firm based in <br/> Eindhoven, The Netherlands.`,
+    author: `Longxiang Qian`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
