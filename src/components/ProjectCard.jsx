@@ -36,7 +36,7 @@ const CardThumbnail = styled.div`
 const CardHeading = styled.h2`
     font-family: "Poppins", sans-serif;
     font-size: 1.4em;
-    margin: 4% 0 2% 0;
+    margin: 4% 0 1% 0;
 `;
 
 const CardDesc = styled.p`

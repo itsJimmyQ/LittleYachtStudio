@@ -56,7 +56,7 @@ const Wrapper = styled.div`
 
 const Subheading = styled.h2`
     color: white;
-    font-weight: 400;
+    font-weight: 100;
     font-size: 1.4em;
     margin-bottom: 10px;
 ;
@@ -71,7 +71,7 @@ const Heading = styled.h1`
 const Description = styled.p`
     color: white;
     font-weight: 300;
-    font-size: 1em;
+    font-size: 1.1em;
     width: 60%;
 `
 
@@ -106,6 +106,7 @@ const Info = styled.h3`
     font-size: 1em;
     color: white;
     font-weight: 300;
+    text-decoration: underline;
     u {
         color: white;
     }

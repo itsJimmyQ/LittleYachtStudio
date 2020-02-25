@@ -1,20 +1,44 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import { Link } from "gatsby"
-class Header extends Component {
-  render() {
-    return (
-      <Container>
-        <LogoContainer>
-          <LogoAlt><Bold>Little Yacht</Bold> studio</LogoAlt>
-        </LogoContainer>
+import { Tween, Timeline } from 'react-gsap';
 
-        <NavLinkContainer>
-          <NavLink><Link to="/#work-section"><Bold> Work </Bold></Link></NavLink>
-          <NavLink><Link to="/#about-section"> About </Link></NavLink>
-          <NavLink><Link to="/#contact-section"> Contact </Link></NavLink>
-        </NavLinkContainer>
-      </Container>
+class Header extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    const { offsetY, headerDisplay } = this.props;
+    let style;
+    console.log(headerDisplay)
+    if (offsetY === 0) {
+      style = {
+        height: "12vh",
+        boxShadow: "0px 2px 3px rgba(0, 0, 0, 0);"
+      }
+    } else {
+      style = {
+        height: "8vh",
+        boxShadow: "0px 2px 3px rgba(0, 0, 0, 0.16);"
+      }
+    }
+    // TODO: Create style object dynamically from props
+    // TODO: Pass object directly into TWEEN wrapper component
+    return (
+      <Tween to={{height: style.height, boxShadow: style.boxShadow}} duration={0.2}>
+        <Container>
+          <LogoContainer>
+            <LogoAlt><Bold>Little Yacht</Bold> studio</LogoAlt>
+          </LogoContainer>
+
+          <NavLinkContainer>
+            <NavLink><Link to="/#work-section"> Work </Link></NavLink>
+            <NavLink><Link to="/#about-section"> About </Link></NavLink>
+            <NavLink><Link to="/#contact-section"> Contact </Link></NavLink>
+          </NavLinkContainer>
+        </Container>
+      </Tween>
     );
   }
 }
@@ -34,13 +58,14 @@ const Container = styled.div`
   height: 15vh;
   width: 100%;
   padding: 0 6%;
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0);
   margin-bottom: 6vh;
 `;
 
 const LogoContainer = styled.div`
   display: flex;
   align-items: center;
+  user-select: none;
 
 `
 const LogoAlt = styled.h1`
@@ -64,8 +89,9 @@ const NavLink = styled.span`
   letter-spacing: 1px;
   margin: 0 12px;
   a {
-    font-weight: 300;
+    font-weight: 400;
     color: black;
     text-decoration: none;
   }
+  user-select: none;
 `

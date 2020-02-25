@@ -12,15 +12,50 @@ import Footer from "../components/Footer"
 import SEO from "../components/seo"
 
 class indexPage extends Component {
+  componentDidMount() {
+    window.addEventListener('scroll', this.onScrollHandler, true);
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScrollHandler);
+  }
+  
+  constructor(props) {
+    super( props );
+
+    this.state = {
+      offsetY: 0,
+      headerDisplay: "block"
+    }
+
+    this.onScrollHandler = this.onScrollHandler.bind(this);
+    // this.__body = React.createRef()
+  }
+
+
+  onScrollHandler() {
+    const offsetY = window.pageYOffset;
+    if (offsetY === 0) {
+      this.setState({offsetY: 0})
+    } else {
+      if (this.state.offsetY !== 1) {
+        this.setState({offsetY: 1})
+      }
+    }  
+    const ifBottom = document.documentElement.scrollHeight - document.documentElement.scrollTop === document.documentElement.clientHeight;
+    if (ifBottom) {
+      this.setState({headerDisplay: "none"})
+    }
+  }
 
   render() {
     return (
-      <Layout>
+      <Layout onScroll={this.onScrollHandler}>
         <SEO title={ "Home" } />
-        <Header />
+        <Header offsetY={this.state.offsetY} headerDisplay={this.state.headerDisplay}/>
         <Wrapper>
           <Heading>
-            A portrait & interior photography firm
+            A <Bold>portrait & interior </Bold>photography studio
             based in <br /> Eindhoven, The Netherlands.
           </Heading>
         </Wrapper>
@@ -38,12 +73,12 @@ class indexPage extends Component {
 
 export default indexPage
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-x: hidden;
-`
+// const Container = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   overflow-x: hidden;
+// `
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -67,4 +102,8 @@ const Subheading = styled.h2`
     font-weight: 300;
     justify-self: flex-start;
     margin-bottom: 2vh;
+`
+
+const Bold = styled.span`
+  font-weight: 600;
 `
