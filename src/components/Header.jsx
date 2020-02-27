@@ -8,25 +8,35 @@ class Header extends Component {
   constructor(props) {
     super(props);
   }
-  render() {
-    const { offsetY, headerDisplay } = this.props;
+
+  getStyleOnOffsetMode( offsetMode ) {
     let style;
-    console.log(headerDisplay)
-    if (offsetY === 0) {
-      style = {
-        height: "12vh",
-        boxShadow: "0px 2px 3px rgba(0, 0, 0, 0);"
-      }
-    } else {
-      style = {
-        height: "8vh",
-        boxShadow: "0px 2px 3px rgba(0, 0, 0, 0.16);"
-      }
+    switch( offsetMode ) {
+      case 0:
+        style = {
+          height: "12vh",
+          boxShadow: "0px 2px 3px rgba(0, 0, 0, 0);"
+        };
+        break;
+      case 1:
+        style = {
+          height: "8vh",
+          transform: "translateY(0%)",
+          boxShadow: "0px 2px 3px rgba(0, 0, 0, 0.16);"
+        };
+        break;
+      case 2:
+        style = {
+          transform: "translateY(-100%)"
+        }
     }
-    // TODO: Create style object dynamically from props
-    // TODO: Pass object directly into TWEEN wrapper component
+    return style
+  }
+  render() {
+    const { offsetMode } = this.props;
+    const style = this.getStyleOnOffsetMode( offsetMode );
     return (
-      <Tween to={{height: style.height, boxShadow: style.boxShadow}} duration={0.2}>
+      <Tween to={style} duration={0.2}>
         <Container>
           <LogoContainer>
             <LogoAlt><Bold>Little Yacht</Bold> studio</LogoAlt>
@@ -59,7 +69,6 @@ const Container = styled.div`
   width: 100%;
   padding: 0 6%;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0);
-  margin-bottom: 6vh;
 `;
 
 const LogoContainer = styled.div`
@@ -73,10 +82,13 @@ const LogoAlt = styled.h1`
   margin: 0;
   font-weight: 300;
   font-size: 2em;
+  @media (max-width: 979px) {
+    font-size: 4vw;
+  }
 `
 
 const Bold = styled.span`
-  font-weight: 900;
+  font-weight: 600;
 `
 
 const NavLinkContainer = styled.div`
@@ -94,4 +106,7 @@ const NavLink = styled.span`
     text-decoration: none;
   }
   user-select: none;
+  @media (max-width: 979px) {
+    font-size: 2.5vw;
+  }
 `

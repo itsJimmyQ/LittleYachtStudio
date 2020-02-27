@@ -18,17 +18,24 @@ class Carousel extends Component {
 export default Carousel;
 
 const Container = styled.section`
-    height: 65vh;
-    /* width: 100%; */
+    height: 60vh;
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
     flex: 1 0 auto;
     margin-bottom: 5vh;
+    @media (max-width: 979px) {
+        height: 50vh;
+        font-size: 5vw;
+        text-align: center;
+    }
 `
 const Card = styled.div`
     height: 100%;
     width: 400px;
     margin: 0 10px;
     background-color: #ddd;
+    @media (max-width: 979px) {
+        width: 50vw;
+    }
 `

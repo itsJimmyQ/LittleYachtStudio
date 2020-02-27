@@ -24,35 +24,33 @@ class indexPage extends Component {
     super( props );
 
     this.state = {
-      offsetY: 0,
-      headerDisplay: "block"
+      offsetMode: 0,
     }
 
     this.onScrollHandler = this.onScrollHandler.bind(this);
-    // this.__body = React.createRef()
   }
 
 
   onScrollHandler() {
     const offsetY = window.pageYOffset;
     if (offsetY === 0) {
-      this.setState({offsetY: 0})
+      this.setState({offsetMode: 0})
     } else {
-      if (this.state.offsetY !== 1) {
-        this.setState({offsetY: 1})
+      if (this.state.offsetMode !== 1) {
+        this.setState({offsetMode: 1})
+      }
+      const ifBottom = document.documentElement.scrollHeight - document.documentElement.scrollTop === document.documentElement.clientHeight;
+      if (ifBottom) {
+        this.setState({offsetMode: 2})
       }
     }  
-    const ifBottom = document.documentElement.scrollHeight - document.documentElement.scrollTop === document.documentElement.clientHeight;
-    if (ifBottom) {
-      this.setState({headerDisplay: "none"})
-    }
   }
 
   render() {
     return (
       <Layout onScroll={this.onScrollHandler}>
         <SEO title={ "Home" } />
-        <Header offsetY={this.state.offsetY} headerDisplay={this.state.headerDisplay}/>
+        <Header offsetMode={this.state.offsetMode}/>
         <Wrapper>
           <Heading>
             A <Bold>portrait & interior </Bold>photography studio
@@ -93,15 +91,24 @@ const Heading = styled.h1`
   color: #28282A;
   justify-self: flex-start;
   line-height: 1.2em;
-  padding-top: 20vh;
+  padding-top: 14vh;
+  @media (max-width: 979px) {
+    font-size: 5vw;
+    text-align: center;
+  }
 `
 
 const Subheading = styled.h2`
     font-family: "Poppins", sans-serif;
     font-size: 2em;
-    font-weight: 300;
+    font-weight: 400;
     justify-self: flex-start;
     margin-bottom: 2vh;
+    @media (max-width: 979px) {
+      font-size: 4.5vw;
+      text-align: center;
+    }
+    
 `
 
 const Bold = styled.span`

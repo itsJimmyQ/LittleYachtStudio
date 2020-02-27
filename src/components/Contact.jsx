@@ -49,16 +49,19 @@ const Container = styled.section`
     align-items: center;
 `
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 80%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
 `
-
 const Subheading = styled.h2`
     color: white;
     font-weight: 100;
     font-size: 1.4em;
     margin-bottom: 10px;
+    @media (max-width: 979px) {
+        font-size: 3vw;
+        margin-bottom: 0;
+    }
 ;
 `
 const Heading = styled.h1`
@@ -66,6 +69,9 @@ const Heading = styled.h1`
     font-weight: 600;
     font-size: 2em;
     margin-bottom: 10px;
+    @media (max-width: 979px) {
+        font-size: 5.5vw;
+    }
 `
 
 const Description = styled.p`
@@ -73,6 +79,10 @@ const Description = styled.p`
     font-weight: 300;
     font-size: 1.1em;
     width: 60%;
+    @media (max-width: 979px) {
+        width: 100%;
+        font-size: 2.5vw;
+    }
 `
 
 const ContactBtn = styled.button`
@@ -93,6 +103,12 @@ const ContactSubsection = styled.div`
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     width: 60%;
+    @media (max-width: 979px) {
+        margin-top: 8vh;
+        width: 100%;
+        font-size: 3vw;
+        grid-column-gap: 10vw;
+    }
 `
 
 const Label = styled.label`
@@ -100,6 +116,9 @@ const Label = styled.label`
     color: white;
     opacity: 0.5;
     font-weight: 500;
+    @media (max-width: 979px) {
+        font-size: 2.5vw;
+    }
 `
 const Info = styled.h3`
     font-family: "Montserrat", sans-serif;
@@ -109,6 +128,10 @@ const Info = styled.h3`
     text-decoration: underline;
     u {
         color: white;
+    }
+    @media (max-width: 979px) {
+        font-size: 2.6vw;
+        text-decoration: none;
     }
 `
 
