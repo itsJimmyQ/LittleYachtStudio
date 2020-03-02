@@ -92,9 +92,14 @@ const Heading = styled.h1`
   justify-self: flex-start;
   line-height: 1.2em;
   padding-top: 14vh;
-  @media (max-width: 979px) {
+
+  @media (max-width: 1024px) {
     font-size: 5vw;
     text-align: center;
+  }
+
+  @media (max-width: 414px) {
+    font-size: 5.5vw
   }
 `
 
@@ -104,11 +109,15 @@ const Subheading = styled.h2`
     font-weight: 400;
     justify-self: flex-start;
     margin-bottom: 2vh;
-    @media (max-width: 979px) {
+
+    @media (max-width: 1024px) {
       font-size: 4.5vw;
       text-align: center;
     }
     
+    @media (max-width: 414px) {
+    font-size: 5vw
+  }
 `
 
 const Bold = styled.span`

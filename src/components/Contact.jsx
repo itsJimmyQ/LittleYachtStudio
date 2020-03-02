@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
+import { Link } from "gatsby"
 
 class Contact extends Component {
     render() {
@@ -17,7 +18,7 @@ class Contact extends Component {
                     <ContactSubsection>
                         <ContactDetail>
                             <Label> Email </Label>
-                            <Info> littleyachtstudio@gmail.com </Info>
+                            <Info> <a href={"mailto:abc@example.com?subject = Feedback&body = Message"}>littleyachtstudio@gmail.com </a> </Info>
                         </ContactDetail>
                         <ContactDetail>
                             <Label> Whatsapp </Label>
@@ -25,7 +26,7 @@ class Contact extends Component {
                         </ContactDetail>
                         <ContactDetail>
                             <Label> Instagram </Label>
-                            <Info> @iamjimmyqain </Info>
+                            <Info> <a href={"https://www.instagram.com/iamjimmyqian/"}>@littleyachtstudio </a> </Info>
                         </ContactDetail>
                         <ContactDetail>
                             <Label> Resume </Label>
@@ -42,7 +43,7 @@ export default Contact;
 
 const Container = styled.section`
     background-color: #28282A;
-    height: 80vh;
+    height: 75vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -58,8 +59,14 @@ const Subheading = styled.h2`
     font-weight: 100;
     font-size: 1.4em;
     margin-bottom: 10px;
-    @media (max-width: 979px) {
+
+    @media (max-width: 1024px) {
         font-size: 3vw;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 414px) {
+        font-size: 3.5vw;
         margin-bottom: 0;
     }
 ;
@@ -69,8 +76,13 @@ const Heading = styled.h1`
     font-weight: 600;
     font-size: 2em;
     margin-bottom: 10px;
-    @media (max-width: 979px) {
+
+    @media (max-width: 1024px) {
         font-size: 5.5vw;
+    }
+
+    @media (max-width: 414px) {
+        font-size: 6vw;
     }
 `
 
@@ -79,9 +91,15 @@ const Description = styled.p`
     font-weight: 300;
     font-size: 1.1em;
     width: 60%;
-    @media (max-width: 979px) {
+
+    @media (max-width: 1024px) {
         width: 100%;
         font-size: 2.5vw;
+    }
+
+    @media (max-width: 414px) {
+        width: 100%;
+        font-size: 3vw;
     }
 `
 
@@ -103,11 +121,13 @@ const ContactSubsection = styled.div`
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     width: 60%;
-    @media (max-width: 979px) {
-        margin-top: 8vh;
+    
+    @media (max-width: 1024px) {
+        margin-top: 5vh;
         width: 100%;
         font-size: 3vw;
         grid-column-gap: 10vw;
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
     }
 `
 
@@ -116,8 +136,14 @@ const Label = styled.label`
     color: white;
     opacity: 0.5;
     font-weight: 500;
-    @media (max-width: 979px) {
+
+    @media (max-width: 1024px) {
         font-size: 2.5vw;
+    }
+
+    @media (max-width: 414px) {
+        font-size: 2.7vw;
+        text-decoration: none;
     }
 `
 const Info = styled.h3`
@@ -125,12 +151,22 @@ const Info = styled.h3`
     font-size: 1em;
     color: white;
     font-weight: 300;
-    text-decoration: underline;
-    u {
+    cursor: pointer;
+    u, a {
         color: white;
     }
-    @media (max-width: 979px) {
-        font-size: 2.6vw;
+
+    a {
+        text-decoration: none;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 2.7vw;
+        text-decoration: none;
+    }
+
+    @media (max-width: 414px) {
+        font-size: 3vw;
         text-decoration: none;
     }
 `

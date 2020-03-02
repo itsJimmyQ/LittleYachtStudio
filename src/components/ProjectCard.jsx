@@ -25,6 +25,10 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: 414px) {
+        height: 70vh
+    }
 `;
 
 const CardThumbnail = styled.div`
@@ -37,9 +41,14 @@ const CardHeading = styled.h2`
     font-family: "Poppins", sans-serif;
     font-size: 1.4em;
     margin: 2% 0 1% 0;
-    @media (max-width: 979px) {
+    @media (max-width: 1024px) {
         font-size: 3.5vw;
     }
+
+    @media (max-width: 414px) {
+        font-size: 4vw;
+    }
+
 `;
 
 const CardDesc = styled.p`
@@ -48,7 +57,12 @@ const CardDesc = styled.p`
     font-weight: 500;
     display: flex;
     margin: 0;
-    @media (max-width: 979px) {
+
+    @media (max-width: 1024px) {
         font-size: 2.5vw;
+    }
+
+    @media (max-width: 414px) {
+        font-size: 3vw;
     }
 `;

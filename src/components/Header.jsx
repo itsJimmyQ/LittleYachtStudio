@@ -31,7 +31,7 @@ class Header extends Component {
         }
     }
     return style
-  }
+  } 
   render() {
     const { offsetMode } = this.props;
     const style = this.getStyleOnOffsetMode( offsetMode );
@@ -44,8 +44,7 @@ class Header extends Component {
 
           <NavLinkContainer>
             <NavLink><Link to="/#work-section"> Work </Link></NavLink>
-            <NavLink><Link to="/#about-section"> About </Link></NavLink>
-            <NavLink><Link to="/#contact-section"> Contact </Link></NavLink>
+            <NavLink><Link to="/#contact-section"> About & Contact </Link></NavLink>
           </NavLinkContainer>
         </Container>
       </Tween>
@@ -59,6 +58,8 @@ const Container = styled.div`
   position: fixed;
   top: 0;
   z-index: 999;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   font-family: "Poppins", sans-serif;
   display: flex;
   background-color: white;
@@ -82,7 +83,7 @@ const LogoAlt = styled.h1`
   margin: 0;
   font-weight: 300;
   font-size: 2em;
-  @media (max-width: 979px) {
+  @media (max-width: 1024px) {
     font-size: 4vw;
   }
 `
@@ -106,7 +107,7 @@ const NavLink = styled.span`
     text-decoration: none;
   }
   user-select: none;
-  @media (max-width: 979px) {
+  @media (max-width: 1024px) {
     font-size: 2.5vw;
   }
 `
