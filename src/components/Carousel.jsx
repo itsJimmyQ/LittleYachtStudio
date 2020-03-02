@@ -35,6 +35,8 @@ const Card = styled.div`
     width: 400px;
     margin: 0 10px;
     background-color: #ddd;
+    /* box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3); */
+
     @media (max-width: 1024px) {
         width: 50vw;
     }

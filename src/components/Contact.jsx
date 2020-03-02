@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 class Contact extends Component {
     render() {
         return (
-            <Container id = "contact-section">
+            <Container id={"contact-section"}>
                 <Wrapper>
                     <Subheading> Interesed? </Subheading>
                     <Heading> Contact us! </Heading>

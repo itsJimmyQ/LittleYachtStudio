@@ -52,7 +52,7 @@ class indexPage extends Component {
         <SEO title={ "Home" } />
         <Header offsetMode={this.state.offsetMode}/>
         <Wrapper>
-          <Heading>
+          <Heading id={"work-section"}>
             A <Bold>portrait & interior </Bold>photography studio
             based in <br /> Eindhoven, The Netherlands.
           </Heading>
@@ -116,8 +116,8 @@ const Subheading = styled.h2`
     }
     
     @media (max-width: 414px) {
-    font-size: 5vw
-  }
+      font-size: 5vw
+    }
 `
 
 const Bold = styled.span`

@@ -25,9 +25,14 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2); */
+    /* border: 2px solid black; */
+    /* border-radius: 5px; */
+    /* padding: 20px 20px; */
 
     @media (max-width: 414px) {
-        height: 70vh
+        height: 70vh;
+        padding: 0;
     }
 `;
 

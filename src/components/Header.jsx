@@ -100,13 +100,13 @@ const NavLinkContainer = styled.div`
 const NavLink = styled.span`
   font-size: 1em;
   letter-spacing: 1px;
-  margin: 0 12px;
+  margin: 0 25px;
   a {
     font-weight: 400;
-    color: black;
     text-decoration: none;
   }
   user-select: none;
+
   @media (max-width: 1024px) {
     font-size: 2.5vw;
   }
