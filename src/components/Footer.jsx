@@ -11,7 +11,7 @@ class Footer extends Component {
                         {/* <Info> (+31) 0636 067 350 </Info> */}
                         <Info> Eindhoven, The Netherlands. </Info>
                         {/* <Info> littleyachtstudio@gmail.com </Info> */}
-                        <Info> Created by <a href="https://www.linkedin.com/in/longxiang-qian-38b381188/">Longxiang Qian</a> </Info>                        
+                        <Info> Created by <a href="https://www.linkedin.com/in/longxiang-qian-38b381188/">Longxiang Qian</a> </Info>                     
                     </InfoSection>
 
                 </Wrapper>
@@ -54,9 +54,9 @@ const InfoSection = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-column-gap: 50px;
+    grid-column-gap: 30px;
     grid-row-gap: 5px;
-    width: 50%;
+    width: 60%;
     
     @media (max-width: 1024px) {
         width: 100%;    

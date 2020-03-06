@@ -11,6 +11,7 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer"
 import SEO from "../components/seo"
 
+
 class indexPage extends Component {
   componentDidMount() {
     window.addEventListener('scroll', this.onScrollHandler, true);
@@ -50,9 +51,12 @@ class indexPage extends Component {
     return (
       <Layout onScroll={this.onScrollHandler}>
         <SEO title={ "Home" } />
-        <Header offsetMode={this.state.offsetMode}/>
+        <Header 
+          offsetMode={this.state.offsetMode}
+          links={["Works", "Contact"]}
+        />
         <Wrapper>
-          <Heading id={"work-section"}>
+          <Heading id={"works-section"}>
             A <Bold>portrait & interior </Bold>photography studio
             based in <br /> Eindhoven, The Netherlands.
           </Heading>
@@ -71,12 +75,6 @@ class indexPage extends Component {
 
 export default indexPage
 
-// const Container = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   overflow-x: hidden;
-// `
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;

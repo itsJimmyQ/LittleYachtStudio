@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import styled from "styled-components"
 
+import Slider from "react-slick";
+
+
+
 class Carousel extends Component {
     render() {
         return (
             <Container>
+                <Card/>
                 <Card/>
                 <Card/>
                 <Card/>
@@ -20,9 +25,8 @@ export default Carousel;
 const Container = styled.section`
     height: 60vh;
     display: flex;
-    justify-content: center;
     flex-wrap: nowrap;
-    flex: 1 0 auto;
+
     margin-bottom: 5vh;
     @media (max-width: 1024px) {
         height: 50vh;

@@ -1,16 +1,38 @@
 import React, { Component } from 'react';
+import { Link } from "gatsby"
 import styled from "styled-components";
+import Img from "gatsby-image"
 
 class ProjectCard extends Component {
+
+    constructor(props) {
+        super(props);
+      }
+
     render() {
+        const { index } = this.props;
+        const projects = ["Portrait", "Urban", "Product", "Miscellaneous"]
         return (
-            <Container>
-                <CardThumbnail />
-                <CardHeading> Project One </CardHeading>
+            <Container>  
+                <CardThumbnail>
+                    <Link to={`/Projects/${projects[index]}`}>
+                        <Img 
+                            fluid={this.props.image}
+                            alt={"Thumbnail"}
+                            backgroundColor={true}
+                            style={
+                                {width: "100%", height: "100%"}
+                            }
+                        />
+                         <OverlayText>Read More</OverlayText>
+                    </Link>
+                   
+                </CardThumbnail>
+                <CardHeading> { projects[index].toUpperCase() } </CardHeading>
                 <CardDesc>
-                 Lorem ipsum dolor sit amet,
-                 consectetur adipiscing elit.
-                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit.
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                 </CardDesc>
             </Container>
         );
@@ -20,32 +42,71 @@ class ProjectCard extends Component {
 export default ProjectCard;
 
 const Container = styled.div`
-    height: 80vh;
+    height: 85vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 3vh;
     /* box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2); */
     /* border: 2px solid black; */
     /* border-radius: 5px; */
     /* padding: 20px 20px; */
 
+    @media (max-width: 1024px) {
+        height: 70vh;
+
+    }
     @media (max-width: 414px) {
         height: 70vh;
-        padding: 0;
+        margin-bottom: 5vh;
     }
 `;
 
 const CardThumbnail = styled.div`
     height: 90%;
     width: 100%;
-    background-color: #28282A;
-    opacity: 0.3;
+    transition: 0.2s ease-in;
+    filter: grayscale(80%);
+
+    &:hover{
+        filter: grayscale(0%)
+    }
+
+    &:hover>a>h1 {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: 1024px) {
+        filter: grayscale(0%);
+
+        img {
+            border-radius: 5px;
+        }
+    }
 `;
+
+const OverlayText = styled.h1`
+    position: absolute;
+    font-size: 10em;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transition: 0.2s ease-in;
+    transform: translate(-50%, -49%);
+    color: #DCE7FF;
+    mix-blend-mode: difference;
+    margin: 0;
+    line-height: 1em;
+    user-select: none;
+`
+
 const CardHeading = styled.h2`
     font-family: "Poppins", sans-serif;
     font-size: 1.4em;
-    margin: 2% 0 1% 0;
+    margin: 2% 0 0.5% 0;
+
     @media (max-width: 1024px) {
         font-size: 3.5vw;
     }
@@ -55,6 +116,7 @@ const CardHeading = styled.h2`
     }
 
 `;
+
 
 const CardDesc = styled.p`
     font-family: "Montserrat", sans-serif;

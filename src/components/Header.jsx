@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import { Link } from "gatsby"
-import { Tween, Timeline } from 'react-gsap';
+import { Tween } from 'react-gsap';
 
 class Header extends Component {
 
@@ -28,23 +28,36 @@ class Header extends Component {
       case 2:
         style = {
           transform: "translateY(-100%)"
+        };
+        break;
+      case undefined:
+        style = {
+          height: "12vh",
+          boxShadow: "0px 2px 3px rgba(0, 0, 0, 0);"
         }
     }
     return style
   } 
+
+  
   render() {
     const { offsetMode } = this.props;
+    console.log(offsetMode)
     const style = this.getStyleOnOffsetMode( offsetMode );
+    const { links } = this.props;
     return (
       <Tween to={style} duration={0.2}>
         <Container>
           <LogoContainer>
-            <LogoAlt><Bold>Little Yacht</Bold> studio</LogoAlt>
+            <Anchor href="/"><LogoAlt><Bold>Little Yacht</Bold> studio</LogoAlt></Anchor>
           </LogoContainer>
 
           <NavLinkContainer>
-            <NavLink><Link to="/#work-section"> Work </Link></NavLink>
-            <NavLink><Link to="/#contact-section"> About & Contact </Link></NavLink>
+            {
+              links.map((link, index) => {
+                return <NavLink key={index}><Link to={`/#${link.toLowerCase()}-section`}> { link } </Link></NavLink>
+              })
+            }
           </NavLinkContainer>
         </Container>
       </Tween>
@@ -66,7 +79,7 @@ const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 15vh;
+  height: 12vh;
   width: 100%;
   padding: 0 6%;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0);
@@ -90,6 +103,10 @@ const LogoAlt = styled.h1`
 
 const Bold = styled.span`
   font-weight: 600;
+`
+
+const Anchor = styled.a`
+  text-decoration: none;
 `
 
 const NavLinkContainer = styled.div`
