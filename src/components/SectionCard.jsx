@@ -3,19 +3,18 @@ import { Link } from "gatsby"
 import styled from "styled-components";
 import Img from "gatsby-image"
 
-class ProjectCard extends Component {
+class SectionCard extends Component {
 
     constructor(props) {
         super(props);
       }
 
     render() {
-        const { index } = this.props;
-        const projects = ["Portrait", "Urban", "Product", "Miscellaneous"]
+        const { heading, description, path } = this.props;
         return (
             <Container>  
                 <CardThumbnail>
-                    <Link to={`/Projects/${projects[index]}`}>
+                    <Link to={path}>
                         <Img 
                             fluid={this.props.image}
                             alt={"Thumbnail"}
@@ -28,18 +27,16 @@ class ProjectCard extends Component {
                     </Link>
                    
                 </CardThumbnail>
-                <CardHeading> { projects[index].toUpperCase() } </CardHeading>
+                <CardHeading> { heading } </CardHeading>
                 <CardDesc>
-                    Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        { description }
                 </CardDesc>
             </Container>
         );
     }
 }
 
-export default ProjectCard;
+export default SectionCard;
 
 const Container = styled.div`
     height: 85vh;

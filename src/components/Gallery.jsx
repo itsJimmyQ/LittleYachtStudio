@@ -11,6 +11,7 @@ class Gallery extends Component {
     }
     
     render() {
+        console.log(this.props.imageNodes)
         return (
             <Container>
                 <ImgContainer />

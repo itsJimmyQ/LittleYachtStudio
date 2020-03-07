@@ -8,31 +8,41 @@ import Gallery from "../components/Gallery"
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark
+  // TODO: data.images == undefined??????
+  const { markdowns, images } = data
+  const { frontmatter, html } = markdowns
+  console.log(data)
   return (
     <Container>
+        <SEO title={frontmatter.title} />
         <Header
           links={["Home", "Contact"]}
         />
         <Wrapper>
-            <SEO title={ frontmatter.title } />
             <Heading>{frontmatter.title}</Heading>
-            {/* <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-            /> */}
-            {/* TODO: CREATE GALLERY COMPONENT */}
-            <Gallery />
-            {/* TODO: Fetch images from a specific folder based on path */}
+            {/* TODO: Pass in image nodes with FLUID attributes */}
+            <Gallery imageNodes={images.edges.node}/>
         </Wrapper>
     </Container>
   )
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query($path: String!, $imgKey: String!) {
+    images: allFile(filter: {sourceInstanceName: {eq: $imgKey}}) {
+      edges {
+        node {
+          id
+          childImageSharp{
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+            
+          }
+        }
+      }
+    }
+    markdowns: markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
@@ -42,6 +52,7 @@ export const pageQuery = graphql`
     }
   }
 `
+
 
 const Container = styled.div`
     width: 100%;

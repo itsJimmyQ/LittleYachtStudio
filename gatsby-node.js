@@ -10,8 +10,7 @@ const path = require(`path`)
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const projectTemplate = path.resolve(`src/templates/projectTemplate.js`)
-
+  const sectionTemplate = path.resolve(`src/templates/sectionTemplate.js`)
   const result = await graphql(`
     {
       allMarkdownRemark(
@@ -21,7 +20,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         edges {
           node {
             frontmatter {
-              path
+              path,
+              imgKey
             }
           }
         }
@@ -36,10 +36,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    console.log(node);
     createPage({
       path: node.frontmatter.path,
-      component: projectTemplate,
-      context: {}, // additional data can be passed via context
+      component: sectionTemplate,
+      context: {
+        imgKey: node.frontmatter.imgKey
+      }, // additional data can be passed via context
     })
   })
 }

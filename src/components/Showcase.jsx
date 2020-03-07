@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from "styled-components";
 import { StaticQuery, graphql } from 'gatsby';
 
-import ProjectCard from "./ProjectCard";
+import SectionCard from "./SectionCard";
 
 class Showcase extends Component {
     render() {
@@ -12,33 +12,42 @@ class Showcase extends Component {
                 // TODO: Create MD and render cards dynamically
                     query={graphql`
                         query {
-                            images: allFile(filter: {
-                                sourceInstanceName: {eq: "images-thumbnail"}}, sort: {order: ASC, fields: name}) {
-                                  edges {
+                            sections: allMarkdownRemark {
+                                edges {
                                     node {
-                                      childImageSharp {
-                                        id
-                                        fluid( quality: 100 ){
-                                            ...GatsbyImageSharpFluid
+                                        frontmatter {
+                                            date
+                                            path
+                                            title
+                                            description
+                                            thumbnail {
+                                                id
+                                                childImageSharp {
+                                                    fluid (quality: 100) {
+                                                        ...GatsbyImageSharpFluid
+                                                    }
+                                                }
+                                            }
                                         }
-                                      }            
-                                  }
-                              }
+                                    }
+                                }
                             }
                         }
                     `}
                     render={
                         data => (
-                            // console.log(data)
-                            data.images.edges.map((edge, index) => {
-                                // console.log(edge.node.childImageSharp)
+                            // console.log(data.sections)
+                            data.sections.edges.map((edge, index) => {
                                 const node = edge.node;
-                                const image = node.childImageSharp;
-                                return <ProjectCard 
+                                const frontmatter = node.frontmatter;
+                                // console.log(frontmatter)
+                                const image = frontmatter.thumbnail.childImageSharp;
+                                return <SectionCard 
                                     key={ image.id }
-                                    heading={ image.id }
+                                    heading={ frontmatter.title }
                                     image={ image.fluid }
-                                    index={index}
+                                    path={frontmatter.path}
+                                    description={frontmatter.description}
                                 />
                             })
                         )
