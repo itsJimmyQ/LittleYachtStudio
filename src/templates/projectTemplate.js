@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components";
 import Header from "../components/Header"
 import SEO from "../components/seo"
+import Gallery from "../components/Gallery"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -17,11 +18,12 @@ export default function Template({
         <Wrapper>
             <SEO title={ frontmatter.title } />
             <Heading>{frontmatter.title}</Heading>
-            <div
+            {/* <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
-            />
+            /> */}
             {/* TODO: CREATE GALLERY COMPONENT */}
+            <Gallery />
             {/* TODO: Fetch images from a specific folder based on path */}
         </Wrapper>
     </Container>
@@ -66,6 +68,7 @@ const Heading = styled.h1`
     justify-self: flex-start;
     line-height: 1.2em;
     padding-top: 14vh;
+    margin-bottom: 5vh;
 
     @media (max-width: 1024px) {
         font-size: 5vw;

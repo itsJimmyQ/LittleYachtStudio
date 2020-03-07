@@ -9,10 +9,11 @@ class Showcase extends Component {
         return (
             <Container>
                 <StaticQuery
+                // TODO: Create MD and render cards dynamically
                     query={graphql`
                         query {
                             images: allFile(filter: {
-                                sourceInstanceName: {eq: "images-thumbnail"}}) {
+                                sourceInstanceName: {eq: "images-thumbnail"}}, sort: {order: ASC, fields: name}) {
                                   edges {
                                     node {
                                       childImageSharp {

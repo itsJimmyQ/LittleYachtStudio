@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Little Yacht studio`,
-    description: `A portrait & interior photography firm based in <br/> Eindhoven, The Netherlands.`,
+    description: `A portrait & interior photography studio based in Eindhoven, The Netherlands.`,
     author: `Longxiang Qian`,
   },
   plugins: [
