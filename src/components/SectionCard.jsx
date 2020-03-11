@@ -4,11 +4,6 @@ import styled from "styled-components";
 import Img from "gatsby-image"
 
 class SectionCard extends Component {
-
-    constructor(props) {
-        super(props);
-      }
-
     render() {
         const { heading, description, path } = this.props;
         return (

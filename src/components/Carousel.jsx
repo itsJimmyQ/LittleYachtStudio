@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from "styled-components"
 
-import Slider from "react-slick";
+// import Slider from "react-slick";
 
 
 

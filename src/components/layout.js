@@ -24,10 +24,10 @@ Layout.propTypes = {
 export default Layout
 
 const Container = styled.div`
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
-  min-height: 100vh;
 `

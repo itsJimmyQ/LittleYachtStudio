@@ -40,8 +40,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images-misc`,
-        path: `${__dirname}/src/images/misc`,
+        name: `images-event`,
+        path: `${__dirname}/src/images/event`,
       },
     },
     {

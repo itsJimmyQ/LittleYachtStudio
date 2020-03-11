@@ -7,5 +7,5 @@ description: "Lorem ipsum dolor sit amet,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
 key: "portrait"
 thumbnail: "../images/thumbnail/01.jpg"
-imgKey: "image-portrait"
+imgKey: "images-portrait"
 ---

@@ -7,5 +7,5 @@ description: "Lorem ipsum dolor sit amet,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
 key: "urban"
 thumbnail: "../images/thumbnail/02.jpg"
-imgKey: "image-urban"
+imgKey: "images-urban"
 ---

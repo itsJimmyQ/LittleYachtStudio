@@ -1,29 +1,27 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components";
-import Header from "../components/Header"
-import SEO from "../components/seo"
+
 import Gallery from "../components/Gallery"
+import Shell from "../components/Shell"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  // TODO: data.images == undefined??????
   const { markdowns, images } = data
-  const { frontmatter, html } = markdowns
-  console.log(data)
+  const { frontmatter } = markdowns
   return (
-    <Container>
-        <SEO title={frontmatter.title} />
-        <Header
-          links={["Home", "Contact"]}
-        />
+    <Shell
+      title={frontmatter.title}
+      headerLinks={["Home", "Contact"]}
+      bottomCheck={true}
+    >
         <Wrapper>
             <Heading>{frontmatter.title}</Heading>
             {/* TODO: Pass in image nodes with FLUID attributes */}
-            <Gallery imageNodes={images.edges.node}/>
+            <Gallery imgEdges={images.edges}/>
         </Wrapper>
-    </Container>
+    </Shell>
   )
 }
 
@@ -47,21 +45,13 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
-        title
+        title,
+        imgKey
       }
     }
   }
 `
 
-
-const Container = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow-x: hidden;
-`
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -87,6 +77,7 @@ const Heading = styled.h1`
     }
 
     @media (max-width: 414px) {
-        font-size: 5.5vw
+        font-size: 5.5vw;
+        margin-bottom: 2vh;
     }
 `

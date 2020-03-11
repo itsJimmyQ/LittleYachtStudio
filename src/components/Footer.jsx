@@ -6,7 +6,9 @@ class Footer extends Component {
         return (
             <Container>
                 <Wrapper>
-                    <LogoAlt><b>Little Yacht</b> studio</LogoAlt>
+                    <LogoContainer>
+                        <Anchor href="/"><LogoAlt><b>Little Yacht</b > studio</LogoAlt></Anchor>
+                    </LogoContainer>
                     <InfoSection>
                         {/* <Info> (+31) 0636 067 350 </Info> */}
                         <Info> Eindhoven, The Netherlands. </Info>
@@ -29,11 +31,19 @@ const Container = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+
 `
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     width: 80%;
+    /* border-top: 2px solid rgba(40, 40, 42, 0.1); */
+    /* padding-top: 30px; */
+`
+const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  user-select: none;
 `
 const LogoAlt = styled.h1`
     /* color: black; */
@@ -48,6 +58,9 @@ const LogoAlt = styled.h1`
     @media (max-width: 414px) {
         font-size: 5vw;
     }
+`
+const Anchor = styled.a`
+  text-decoration: none;
 `
 const InfoSection = styled.section`
     margin-top: 50px;

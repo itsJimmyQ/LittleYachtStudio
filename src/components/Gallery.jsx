@@ -1,22 +1,24 @@
 import React, { Component } from 'react';
-import { Link } from "gatsby"
 import styled from "styled-components";
-import Img from "gatsby-image"
-import { StaticQuery, graphql } from 'gatsby';
+    
+
+import ImgContainer from "./ImgContainer";
+
 
 class Gallery extends Component {
-
-    constructor(props) {
-        super(props);
-    }
     
     render() {
-        console.log(this.props.imageNodes)
+        console.log(this.props.imgEdges)
+        const { imgEdges } = this.props;
         return (
             <Container>
-                <ImgContainer />
-                <ImgContainer />
-                <ImgContainer />
+                { imgEdges.map((edge, index) => {
+                    const node = edge.node;
+                    const fluid = node.childImageSharp.fluid;
+                    return(
+                        <ImgContainer key={index} image={fluid} />
+                    )
+                })}
             </Container>
         );
     }
@@ -30,7 +32,7 @@ const Container = styled.section`
     width: 100%;
     /* background-color:black; */
     /* grid-template-rows: 1fr 1fr; */
-    grid-template-columns: repeat( auto-fill, minmax(350px, 1fr) );
+    grid-template-columns: repeat( auto-fill, minmax(300px, 1fr) );
     grid-row-gap: 5vh;
     grid-column-gap: 2vw;
 
@@ -43,9 +45,3 @@ const Container = styled.section`
     }
 `;
 
-const ImgContainer = styled.div`
-    height: 75vh;
-    width: auto;
-    background-color: #eee;
-
-`

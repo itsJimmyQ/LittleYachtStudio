@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
-import { Link } from "gatsby"
 
 class Contact extends Component {
     render() {
@@ -14,7 +13,6 @@ class Contact extends Component {
                         internationally. Please get in touch and one of our project managers will 
                         contact you about beginning the proposal process.
                     </Description>
-                    {/* <ContactBtn> Contact us! </ContactBtn> */}
                     <ContactSubsection>
                         <ContactDetail>
                             <Label> Email </Label>
@@ -103,16 +101,16 @@ const Description = styled.p`
     }
 `
 
-const ContactBtn = styled.button`
-    font-size: 1em;
-    background-color: white;
-    padding: 20px 10px;
-    width: 25%;
-    border: none;
-    margin-top: 5vw;
-    font-weight: 600;
-    cursor: pointer;
-`
+// const ContactBtn = styled.button`
+//     font-size: 1em;
+//     background-color: white;
+//     padding: 20px 10px;
+//     width: 25%;
+//     border: none;
+//     margin-top: 5vw;
+//     font-weight: 600;
+//     cursor: pointer;
+// `
 const ContactSubsection = styled.div`
     margin-top: 5%;
     display: grid;

@@ -5,10 +5,6 @@ import { Tween } from 'react-gsap';
 
 class Header extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   getStyleOnOffsetMode( offsetMode ) {
     let style;
     switch( offsetMode ) {
@@ -30,7 +26,7 @@ class Header extends Component {
           transform: "translateY(-100%)"
         };
         break;
-      case undefined:
+      default:
         style = {
           height: "12vh",
           boxShadow: "0px 2px 3px rgba(0, 0, 0, 0);"
@@ -42,14 +38,14 @@ class Header extends Component {
   
   render() {
     const { offsetMode } = this.props;
-    console.log(offsetMode)
+    // console.log(offsetMode)
     const style = this.getStyleOnOffsetMode( offsetMode );
     const { links } = this.props;
     return (
       <Tween to={style} duration={0.2}>
         <Container>
           <LogoContainer>
-            <Anchor href="/"><LogoAlt><Bold>Little Yacht</Bold> studio</LogoAlt></Anchor>
+            <Anchor href="/"><LogoAlt><b>Little Yacht</b> studio</LogoAlt></Anchor>
           </LogoContainer>
 
           <NavLinkContainer>
@@ -89,7 +85,6 @@ const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   user-select: none;
-
 `
 const LogoAlt = styled.h1`
   /* color: black; */
@@ -99,10 +94,6 @@ const LogoAlt = styled.h1`
   @media (max-width: 1024px) {
     font-size: 4vw;
   }
-`
-
-const Bold = styled.span`
-  font-weight: 600;
 `
 
 const Anchor = styled.a`
