@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import styled from "styled-components";
+import styled from "styled-components"
 
 import Gallery from "../components/Gallery"
 import Shell from "../components/Shell"
@@ -16,26 +16,25 @@ export default function Template({
       headerLinks={["Home", "Contact"]}
       bottomCheck={true}
     >
-        <Wrapper>
-            <Heading>{frontmatter.title}</Heading>
-            {/* TODO: Pass in image nodes with FLUID attributes */}
-            <Gallery imgEdges={images.edges}/>
-        </Wrapper>
+      <Wrapper>
+        <Heading>{frontmatter.title}</Heading>
+        <Desc>{frontmatter.description}</Desc>
+        <Gallery imgEdges={images.edges} />
+      </Wrapper>
     </Shell>
   )
 }
 
 export const pageQuery = graphql`
   query($path: String!, $imgKey: String!) {
-    images: allFile(filter: {sourceInstanceName: {eq: $imgKey}}) {
+    images: allFile(filter: { sourceInstanceName: { eq: $imgKey } }) {
       edges {
         node {
           id
-          childImageSharp{
+          childImageSharp {
             fluid(quality: 100) {
               ...GatsbyImageSharpFluid
             }
-            
           }
         }
       }
@@ -45,7 +44,8 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
-        title,
+        title
+        description
         imgKey
       }
     }
@@ -53,31 +53,48 @@ export const pageQuery = graphql`
 `
 
 const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    width: 80%;
-    margin-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 80%;
+  margin-bottom: 5vh;
 `
 
 const Heading = styled.h1`
-    font-family: "Poppins", sans-serif;
-    font-size: 2em;
-    font-weight: 100;
-    color: #28282A;
-    justify-self: flex-start;
-    line-height: 1.2em;
-    padding-top: 14vh;
-    margin-bottom: 5vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: #28282a;
+  justify-self: flex-start;
+  line-height: 1.2em;
+  padding-top: 14vh;
+  margin-bottom: 1vh;
 
-    @media (max-width: 1024px) {
-        font-size: 5vw;
-        text-align: center;
-    }
+  @media (max-width: 1024px) {
+    font-size: 5vw;
+    text-align: center;
+  }
 
-    @media (max-width: 414px) {
-        font-size: 5.5vw;
-        margin-bottom: 2vh;
-    }
+  @media (max-width: 414px) {
+    font-size: 5.5vw;
+    margin-bottom: 2vh;
+  }
+`
+
+const Desc = styled.p`
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  display: flex;
+  margin-bottom: 4vh;
+
+  @media (max-width: 1024px) {
+    font-size: 2.5vw;
+  }
+
+  @media (max-width: 414px) {
+    font-size: 3vw;
+    margin-bottom: 3vh;
+  }
 `

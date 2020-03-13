@@ -20,7 +20,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         edges {
           node {
             frontmatter {
-              path,
+              path
               imgKey
             }
           }
@@ -36,12 +36,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    console.log(node.frontmatter);
     createPage({
       path: node.frontmatter.path,
       component: sectionTemplate,
       context: {
-        imgKey: node.frontmatter.imgKey
+        imgKey: node.frontmatter.imgKey,
       }, // additional data can be passed via context
     })
   })

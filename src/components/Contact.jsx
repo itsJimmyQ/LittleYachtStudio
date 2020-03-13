@@ -100,17 +100,6 @@ const Description = styled.p`
         font-size: 3vw;
     }
 `
-
-// const ContactBtn = styled.button`
-//     font-size: 1em;
-//     background-color: white;
-//     padding: 20px 10px;
-//     width: 25%;
-//     border: none;
-//     margin-top: 5vw;
-//     font-weight: 600;
-//     cursor: pointer;
-// `
 const ContactSubsection = styled.div`
     margin-top: 5%;
     display: grid;
