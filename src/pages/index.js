@@ -35,7 +35,7 @@ class indexPage extends Component {
   render() {
     return (
       <Shell
-        pageTitle={"Home"}
+        title={"Home"}
         headerLinks={["WORK", "CONTACT"]}
         bottomCheck={true}
         id={"work-section"}
