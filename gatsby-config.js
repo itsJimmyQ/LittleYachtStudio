@@ -12,6 +12,18 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-transition-link`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Little Yacht studio`,
+        short_name: `LYS.`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/images/icon/logo.png`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images-thumbnail`,
