@@ -1,14 +1,36 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { TweenLite, TimelineLite } from "gsap"
 import Img from "gatsby-image"
 import { isMobile, isBrowser } from "react-device-detect"
 
 class SectionCard extends Component {
+  constructor(props) {
+    super(props)
+
+    this.card = null
+    this.myTween = new TimelineLite({ paused: true })
+  }
+
+  componentDidMount() {
+    this.myTween
+      .from(this.card, 0.3, {
+        x: 20,
+        delay: 0.8,
+        ease: "power3.In",
+        opacity: 0,
+      })
+      .play()
+  }
   render() {
-    const { id, heading, description, path } = this.props
+    const { heading, description, path } = this.props
     return (
-      <Container key={id}>
+      <Container
+        ref={div => {
+          this.card = div
+        }}
+      >
         <CardThumbnail>
           <Link to={path}>
             <Img
@@ -62,11 +84,11 @@ const CardThumbnail = styled.div`
 
   &:hover > a > h1 {
     opacity: 1;
-    /* transform: translate(-50%, -50%); */
+    transform: translateY(-5%);
   }
 
   @media (max-width: 1024px) {
-    height: 85%;
+    height: 90%;
     filter: grayscale(0%);
     img {
       border-radius: 5px;
@@ -82,7 +104,7 @@ const CardThumbnail = styled.div`
 const OverlayText = styled.h1`
   position: absolute;
   font-size: 3vw;
-  top: 80%;
+  bottom: 8%;
   left: 10%;
   opacity: 0;
   transition: 0.2s ease-in;
@@ -115,10 +137,10 @@ const CardDesc = styled.p`
   margin: 0;
 
   @media (max-width: 1024px) {
-    font-size: 2.5vw;
+    font-size: 3vw;
   }
 
   @media (max-width: 414px) {
-    font-size: 3vw;
+    font-size: 3.5vw;
   }
 `

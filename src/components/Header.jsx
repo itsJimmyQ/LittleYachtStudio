@@ -20,6 +20,12 @@ class Header extends Component {
     let style
     if (isMobile) {
       switch (offsetMode) {
+        case 0:
+          style = {
+            height: "12vh",
+            boxShadow: "0px 2px 3px rgba(0, 0, 0, 0)",
+          }
+          break
         case 2:
           style = {
             transform: "translateY(-100%)",
@@ -28,6 +34,7 @@ class Header extends Component {
         default:
           style = {
             transform: "translateY(0%)",
+            boxShadow: "0px 2px 3px rgba(0, 0, 0, 0.16)",
           }
           break
       }
@@ -53,8 +60,9 @@ class Header extends Component {
           break
         default:
           style = {
-            height: "12vh",
-            boxShadow: "0px 2px 3px rgba(0, 0, 0, 0)",
+            height: "8vh",
+            transform: "translateY(0%)",
+            boxShadow: "0px 2px 3px rgba(0, 0, 0, 0.16)",
           }
       }
     }
@@ -69,7 +77,6 @@ class Header extends Component {
     const { offsetMode } = this.props
     const style = this.getStyleOnOffsetMode(offsetMode)
     const { links } = this.props
-    console.log(offsetMode)
     return (
       <Container>
         {isMobile && <HeaderMobile style={style} links={links} />}

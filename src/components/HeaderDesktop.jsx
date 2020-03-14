@@ -3,9 +3,14 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 class HeaderDesktop extends Component {
+  constructor(props) {
+    super(props)
+
+    // this.onClickNav = this.onClickNav.bind(this)
+  }
+
   render() {
     const { style, links } = this.props
-    console.log(style)
     return (
       <Container style={style}>
         <LogoContainer>

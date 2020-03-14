@@ -1,6 +1,6 @@
 import React, { Component } from "react"
-import { TweenLite } from "gsap"
 import styled from "styled-components"
+import { TweenLite, TimelineLite } from "gsap"
 
 import Shell from "../components/Shell"
 import Carousel from "../components/Carousel"
@@ -12,16 +12,25 @@ class indexPage extends Component {
     super(props)
 
     this.heading = null
-    this.myTween = null
+    this.showcase = null
+    this.myTween = new TimelineLite({ paused: true })
   }
 
   componentDidMount() {
-    this.myTween = TweenLite.from(this.heading, 0.4, {
-      y: 10,
-      delay: 0.4,
-      ease: "power3.In",
-      opacity: 0,
-    })
+    this.myTween
+      .from(this.heading, 0.4, {
+        y: 10,
+        delay: 0.4,
+        ease: "power3.In",
+        opacity: 0,
+      })
+      .from(this.subheading, 0.4, {
+        y: 10,
+        delay: 0.4,
+        ease: "power3.In",
+        opacity: 0,
+      })
+      .play()
   }
   render() {
     return (
@@ -33,15 +42,19 @@ class indexPage extends Component {
       >
         <Wrapper>
           <Heading ref={h1 => (this.heading = h1)}>
-            An <Bold>Interior & Lifestyle </Bold>photography studio based in
+            An <Bold>Interior & Lifestyle </Bold>photographer based in
             <br />
             <Bold>Eindhoven, The Netherlands.</Bold>
           </Heading>
         </Wrapper>
         {/* <Carousel /> */}
         <Wrapper>
-          <Subheading> Recent Works </Subheading>
-          <Showcase />
+          <Subheading ref={h1 => (this.heading = h1)}>Recent Works</Subheading>
+          <Showcase
+            ref={div => {
+              this.showcase = div
+            }}
+          />
         </Wrapper>
         <Contact />
       </Shell>

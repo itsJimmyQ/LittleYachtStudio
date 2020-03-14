@@ -5,9 +5,7 @@ import styled from "styled-components"
 import Gallery from "../components/Gallery"
 import Shell from "../components/Shell"
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
+export default function Template({ data }) {
   const { markdowns, images } = data
   const { frontmatter } = markdowns
   return (

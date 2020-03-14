@@ -42,7 +42,6 @@ class HeaderMobile extends Component {
     }
   }
   toggleHeader() {
-    console.log("clicked")
     this.setState({ expanded: !this.state.expanded })
   }
 
