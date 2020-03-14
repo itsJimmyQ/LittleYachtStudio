@@ -18,8 +18,9 @@ class Contact extends Component {
               <Info>
                 <InfoLink
                   href={
-                    "mailto:abc@example.com?subject = Feedback&body = Message"
+                    "mailto:littleyachtstudio@gmail.com?subject = Questions regarding your service&body = Message"
                   }
+                  target="_blank"
                 >
                   littleyachtstudio@gmail.com
                 </InfoLink>
@@ -32,14 +33,20 @@ class Contact extends Component {
             <ContactDetail>
               <Label> Instagram </Label>
               <Info>
-                <InfoLink href={"https://www.instagram.com/iamjimmyqian/"}>
+                <InfoLink
+                  target="_blank"
+                  href={"https://www.instagram.com/iamjimmyqian/"}
+                >
                   @littleyachtstudio
                 </InfoLink>
               </Info>
             </ContactDetail>
             <ContactDetail>
               <Label> Facebook </Label>
-              <InfoLink href={"https://www.facebook.com/littleyachtstudio/"}>
+              <InfoLink
+                target="_blank"
+                href={"https://www.facebook.com/littleyachtstudio/"}
+              >
                 <Info>Little Yacht studio</Info>
               </InfoLink>
             </ContactDetail>

@@ -6,7 +6,12 @@ class ImgContainer extends Component {
     const { image } = this.props
     return (
       <Container>
-        <Img fluid={image} fadeIn={true} backgroundColor={"#eee"} />
+        <Img
+          loading={"eager"}
+          fluid={image}
+          fadeIn={true}
+          backgroundColor={"#eee"}
+        />
       </Container>
     )
   }
