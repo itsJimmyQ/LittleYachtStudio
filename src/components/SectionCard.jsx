@@ -65,9 +65,9 @@ const Container = styled.div`
   @media (max-width: 1024px) {
     height: 70vh;
     z-index: 9;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.16);
-    padding: 10px;
-    border-radius: 3px;
+    /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.16); */
+    /* padding: 10px; */
+    /* border-radius: 3px; */
   }
   @media (max-width: 414px) {
     height: 70vh;

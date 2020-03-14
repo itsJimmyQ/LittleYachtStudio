@@ -105,12 +105,12 @@ const Description = styled.p`
 
   @media (max-width: 1024px) {
     width: 100%;
-    font-size: 2.5vw;
+    font-size: 3vw;
   }
 
   @media (max-width: 414px) {
     width: 100%;
-    font-size: 3.2vw;
+    font-size: 3.5vw;
   }
 `
 const ContactSubsection = styled.div`
@@ -142,7 +142,7 @@ const Label = styled.label`
   }
 
   @media (max-width: 414px) {
-    font-size: 2.7vw;
+    font-size: 3vw;
     text-decoration: none;
   }
 `
@@ -167,7 +167,7 @@ const Info = styled.h3`
   }
 
   @media (max-width: 414px) {
-    font-size: 3.2vw;
+    font-size: 3.5vw;
     text-decoration: none;
   }
 `
