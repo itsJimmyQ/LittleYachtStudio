@@ -1,7 +1,12 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { isMobile, isBrowser } from "react-device-detect"
+import {
+  isMobile,
+  isBrowser,
+  BrowserView,
+  MobileView,
+} from "react-device-detect"
 
 class HeaderDesktop extends Component {
   constructor(props) {
@@ -9,7 +14,6 @@ class HeaderDesktop extends Component {
 
     // this.onClickNav = this.onClickNav.bind(this)
   }
-
   render() {
     const { style, links } = this.props
     return (
