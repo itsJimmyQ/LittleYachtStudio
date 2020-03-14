@@ -68,6 +68,7 @@ const Heading = styled.h1`
   font-weight: 600;
   color: #28282a;
   justify-self: flex-start;
+  align-self: flex-start;
   line-height: 1.2em;
   padding-top: 14vh;
   margin-bottom: 1vh;

@@ -44,10 +44,11 @@ class Shell extends Component {
   }
 
   render() {
-    const { pageTitle, headerLinks, bottomCheck, children } = this.props
+    const { title, headerLinks, bottomCheck, children } = this.props
+    console.log(title)
     return (
       <Container onScroll={this.onScrollHandler}>
-        <SEO title={pageTitle} />
+        <SEO title={title} />
         <Header
           offsetMode={this.state.offsetMode}
           links={headerLinks}
