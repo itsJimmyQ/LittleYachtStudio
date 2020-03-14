@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { TweenLite, TimelineLite } from "gsap"
+// import { TweenLite, TimelineLite } from "gsap"
 
 import Shell from "../components/Shell"
-import Carousel from "../components/Carousel"
+// import Carousel from "../components/Carousel"
 import Showcase from "../components/Showcase"
 import Contact from "../components/Contact"
 
