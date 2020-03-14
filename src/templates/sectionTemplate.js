@@ -88,11 +88,12 @@ const Desc = styled.p`
   margin-bottom: 4vh;
 
   @media (max-width: 1024px) {
-    font-size: 2.5vw;
+    text-align: center;
+    font-size: 3vw;
   }
 
   @media (max-width: 414px) {
-    font-size: 3vw;
+    font-size: 3.5vw;
     margin-bottom: 3vh;
   }
 `

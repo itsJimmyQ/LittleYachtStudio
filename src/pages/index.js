@@ -13,24 +13,24 @@ class indexPage extends Component {
 
     this.heading = null
     this.showcase = null
-    this.myTween = new TimelineLite({ paused: true })
+    // this.myTween = new TimelineLite({ paused: true })
   }
 
   componentDidMount() {
-    this.myTween
-      .from(this.heading, 0.4, {
-        y: 10,
-        delay: 0.4,
-        ease: "power3.In",
-        opacity: 0,
-      })
-      .from(this.subheading, 0.4, {
-        y: 10,
-        delay: 0.4,
-        ease: "power3.In",
-        opacity: 0,
-      })
-      .play()
+    // this.myTween
+    //   .from(this.heading, 0.4, {
+    //     y: 10,
+    //     delay: 0.4,
+    //     ease: "power3.In",
+    //     opacity: 0,
+    //   })
+    //   .from(this.subheading, 0.4, {
+    //     y: 10,
+    //     delay: 0.4,
+    //     ease: "power3.In",
+    //     opacity: 0,
+    //   })
+    //   .play()
   }
   render() {
     return (
@@ -84,7 +84,7 @@ const Heading = styled.h1`
 
   @media (max-width: 1024px) {
     font-size: 5vw;
-    text-align: center;
+    text-align: left;
   }
 
   @media (max-width: 414px) {
@@ -97,7 +97,8 @@ const Subheading = styled.h2`
   font-weight: 600;
   justify-self: flex-start;
   margin-bottom: 2vh;
-
+  display: flex;
+  z-index: -9;
   @media (max-width: 1024px) {
     font-size: 4.5vw;
     text-align: center;

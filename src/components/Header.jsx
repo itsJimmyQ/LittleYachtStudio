@@ -79,8 +79,10 @@ class Header extends Component {
     const { links } = this.props
     return (
       <Container>
-        {isMobile && <HeaderMobile style={style} links={links} />}
-        {isBrowser && <HeaderDesktop style={style} links={links} />}
+        {/* {isMobile && <HeaderMobile style={style} links={links} />} */}
+        {/* {isBrowser && !isMobile && ( */}
+        <HeaderDesktop style={style} links={links} />
+        {/* )} */}
       </Container>
     )
   }

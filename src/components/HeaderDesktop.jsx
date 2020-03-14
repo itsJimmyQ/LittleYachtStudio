@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { isMobile, isBrowser } from "react-device-detect"
 
 class HeaderDesktop extends Component {
   constructor(props) {
@@ -12,12 +13,19 @@ class HeaderDesktop extends Component {
   render() {
     const { style, links } = this.props
     return (
-      <Container style={style}>
+      <ContainerDesktop style={style}>
         <LogoContainer>
           <Anchor href="/">
-            <LogoAlt>
-              <b>Little Yacht</b> studio
-            </LogoAlt>
+            {isBrowser && (
+              <LogoAlt>
+                <Bold>Little Yacht</Bold> studio
+              </LogoAlt>
+            )}
+            {isMobile && (
+              <LogoAlt>
+                <Bold>LYS.</Bold>
+              </LogoAlt>
+            )}
           </Anchor>
         </LogoContainer>
         <NavLinkContainer>
@@ -29,14 +37,14 @@ class HeaderDesktop extends Component {
             )
           })}
         </NavLinkContainer>
-      </Container>
+      </ContainerDesktop>
     )
   }
 }
 
 export default HeaderDesktop
 
-const Container = styled.div`
+const ContainerDesktop = styled.div`
   position: fixed;
   top: 0;
   z-index: 999;
@@ -52,6 +60,9 @@ const Container = styled.div`
   width: 100%;
   padding: 0 6%;
   transition: 0.3s ease;
+  @media (max-width: 1024px) {
+    padding: 0 10%;
+  }
 `
 
 const LogoContainer = styled.div`
@@ -72,10 +83,10 @@ const LogoAlt = styled.h1`
     font-size: 6vw;
   }
 `
-
 const Anchor = styled.a`
   text-decoration: none;
 `
+const Bold = styled.b``
 
 const NavLinkContainer = styled.div`
   display: flex;
@@ -90,6 +101,9 @@ const NavLink = styled.span`
     font-weight: 600;
     letter-spacing: 2px;
     text-decoration: none;
+    @media (max-width: 414px) {
+      letter-spacing: 1px;
+    }
   }
   user-select: none;
 
@@ -99,5 +113,9 @@ const NavLink = styled.span`
 
   @media (max-width: 1024px) {
     font-size: 2.5vw;
+  }
+  @media (max-width: 414px) {
+    margin: 0 10px;
+    font-size: 3vw;
   }
 `

@@ -18,29 +18,29 @@ class HeaderMobile extends Component {
     this.toggleHeader = this.toggleHeader.bind(this)
   }
 
-  componentDidUpdate() {
-    if (this.state.expanded) {
-      this.myTween = TweenLite.to(this.navLink.children, 0.4, {
-        y: 0,
-        delay: 0.4,
-        ease: "power3.In",
-        opacity: 1,
-        stagger: {
-          amount: 0.15,
-        },
-      })
-    } else {
-      this.myTween = TweenLite.to(this.navLink.children, 0.1, {
-        y: 10,
-        delay: 0,
-        ease: "power3.In",
-        opacity: 0,
-        stagger: {
-          amount: 0.1,
-        },
-      })
-    }
-  }
+  // componentDidUpdate() {
+  //   if (this.state.expanded) {
+  //     this.myTween = TweenLite.to(this.navLink.children, 0.4, {
+  //       y: 0,
+  //       delay: 0.4,
+  //       ease: "power3.In",
+  //       opacity: 1,
+  //       stagger: {
+  //         amount: 0.15,
+  //       },
+  //     })
+  //   } else {
+  //     this.myTween = TweenLite.to(this.navLink.children, 0.1, {
+  //       y: 10,
+  //       delay: 0,
+  //       ease: "power3.In",
+  //       opacity: 0,
+  //       stagger: {
+  //         amount: 0.1,
+  //       },
+  //     })
+  //   }
+  // }
   toggleHeader() {
     this.setState({ expanded: !this.state.expanded })
   }
@@ -50,16 +50,16 @@ class HeaderMobile extends Component {
     let navStyle
     if (expanded) {
       navStyle = {
-        transform: "translateY(0)",
+        transform: "translateX(0)",
       }
     } else {
       navStyle = {
-        transform: "translateY(-88%)",
+        transform: "translateX(100%)",
       }
     }
     const { style, links } = this.props
     return (
-      <Container style={style}>
+      <ContainerMobile style={style}>
         <LogoContainer>
           <Anchor href="/">
             <LogoAlt>
@@ -79,23 +79,25 @@ class HeaderMobile extends Component {
             })}
           </HeaderNav>
         </BackgroundContainer>
-      </Container>
+      </ContainerMobile>
     )
   }
 }
 
 export default HeaderMobile
 
-const Container = styled.div`
+const ContainerMobile = styled.div`
   height: 12vh;
   width: 100%;
   display: flex;
+  z-index: 99;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 10%;
   position: fixed;
   top: 0;
+  background-color: white;
   transition: 0.2s ease;
 `
 
@@ -107,7 +109,6 @@ const LogoContainer = styled.div`
 `
 
 const LogoAlt = styled.h1`
-  /* color: black; */
   margin: 0;
   font-weight: 300;
   font-size: 2em;
@@ -134,7 +135,7 @@ const BackgroundContainer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: -9;
   transform: translateY(-88%);
   transition: 0.4s ease-in-out;
 `
@@ -151,7 +152,7 @@ const NavLink = styled.h2`
   font-size: 8vw;
   margin: 3vh 0;
   text-align: right;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(15%);
   a {
     text-decoration: none;

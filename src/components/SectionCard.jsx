@@ -13,18 +13,18 @@ class SectionCard extends Component {
     this.myTween = new TimelineLite({ paused: true })
   }
 
-  componentDidMount() {
-    this.myTween
-      .from(this.card, 0.3, {
-        x: 20,
-        delay: 0.8,
-        ease: "power3.In",
-        opacity: 0,
-      })
-      .play()
-  }
+  // componentDidMount() {
+  //   this.myTween
+  //     .from(this.card, 0.3, {
+  //       x: 20,
+  //       delay: 0.8,
+  //       ease: "power3.In",
+  //       opacity: 0,
+  //     })
+  //     .play()
+  // }
   render() {
-    const { heading, description, path } = this.props
+    const { elKey, heading, description, path } = this.props
     return (
       <Container
         ref={div => {
@@ -54,7 +54,7 @@ class SectionCard extends Component {
 export default SectionCard
 
 const Container = styled.div`
-  height: 80vh;
+  height: 70vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -64,10 +64,14 @@ const Container = styled.div`
 
   @media (max-width: 1024px) {
     height: 70vh;
-    z-index: -9;
+    z-index: 9;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.16);
+    padding: 10px;
+    border-radius: 3px;
   }
   @media (max-width: 414px) {
-    height: 60vh;
+    height: 70vh;
+    border-radius: 2px;
     margin-bottom: 5vh;
   }
 `
@@ -95,6 +99,7 @@ const CardThumbnail = styled.div`
     }
   }
   @media (max-width: 414px) {
+    height: 85%;
     img {
       border-radius: 3px;
     }
@@ -112,6 +117,9 @@ const OverlayText = styled.h1`
   margin: 0;
   line-height: 1em;
   user-select: none;
+  @media (max-width: 1024px) {
+    visibility: hidden;
+  }
 `
 
 const CardHeading = styled.h2`
@@ -120,12 +128,13 @@ const CardHeading = styled.h2`
   margin: 2% 0 1% 0;
 
   @media (max-width: 1024px) {
-    font-size: 3.5vw;
+    font-size: 4vw;
     margin-bottom: 5px;
   }
 
   @media (max-width: 414px) {
-    font-size: 4vw;
+    font-size: 4.5vw;
+    margin-bottom: 0;
   }
 `
 

@@ -12,17 +12,17 @@ class Gallery extends Component {
     this.myTween = null
   }
 
-  componentDidMount() {
-    this.myTween = TweenLite.from(this.gallery.children, 0.4, {
-      y: 20,
-      delay: 0.4,
-      ease: "power3.In",
-      opacity: 0,
-      stagger: {
-        amount: 0.3,
-      },
-    })
-  }
+  // componentDidMount() {
+  //   this.myTween = TweenLite.from(this.gallery.children, 0.4, {
+  //     y: 20,
+  //     delay: 0.4,
+  //     ease: "power3.In",
+  //     opacity: 0,
+  //     stagger: {
+  //       amount: 0.3,
+  //     },
+  //   })
+  // }
   render() {
     const { imgEdges } = this.props
     return (

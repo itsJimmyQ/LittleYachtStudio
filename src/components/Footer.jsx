@@ -45,8 +45,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
-  /* border-top: 2px solid rgba(40, 40, 42, 0.1); */
-  /* padding-top: 30px; */
 `
 const LogoContainer = styled.div`
   display: flex;
@@ -100,7 +98,7 @@ const Info = styled.h3`
     font-size: 2.5vw;
   }
   @media (max-width: 414px) {
-    font-size: 3vw;
-    font-weight: 600;
+    font-size: 3.5vw;
+    /* font-weight: 600; */
   }
 `

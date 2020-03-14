@@ -45,6 +45,7 @@ class Showcase extends Component {
               return (
                 <SectionCard
                   key={node.id}
+                  elKey={node.id}
                   heading={frontmatter.title}
                   image={image.fluid}
                   path={frontmatter.path}
