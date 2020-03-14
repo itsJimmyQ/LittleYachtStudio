@@ -34,6 +34,7 @@ class SectionCard extends Component {
         <CardThumbnail>
           <Link to={path}>
             <Img
+              loading={"eager"}
               fluid={this.props.image}
               alt={"Thumbnail"}
               backgroundColor={true}
