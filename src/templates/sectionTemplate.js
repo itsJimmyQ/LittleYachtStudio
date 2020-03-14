@@ -13,7 +13,7 @@ export default function Template({
   return (
     <Shell
       title={frontmatter.title}
-      headerLinks={["Home", "Contact"]}
+      headerLinks={["HOME", "CONTACT"]}
       bottomCheck={true}
     >
       <Wrapper>
