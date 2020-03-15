@@ -13,13 +13,9 @@ class ImgContainer extends Component {
           style={{
             height: "100%",
           }}
+          overlayBgColorEnd={"rgba(0, 0, 0, 0.6"}
         >
-          <Img
-            loading={"auto"}
-            fluid={image}
-            fadeIn={true}
-            // backgroundColor={true}
-          />
+          <Img loading={"auto"} fluid={image} fadeIn={true} />
         </Zoom>
       </Container>
     )
