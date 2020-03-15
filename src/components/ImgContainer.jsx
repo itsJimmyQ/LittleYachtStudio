@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import Zoom from "react-medium-image-zoom"
 import "../../node_modules/react-medium-image-zoom/dist/styles.css"
+import { isMobile, isBrower } from "react-device-detect"
 
 class ImgContainer extends Component {
   render() {
@@ -34,6 +35,7 @@ const Container = styled.div`
   }
   @media (max-width: 1024px) {
     z-index: -9;
+    height: 65vh;
   }
   div {
     height: 100%;
