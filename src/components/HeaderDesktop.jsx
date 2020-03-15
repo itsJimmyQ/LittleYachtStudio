@@ -11,8 +11,6 @@ import {
 class HeaderDesktop extends Component {
   constructor(props) {
     super(props)
-
-    // this.onClickNav = this.onClickNav.bind(this)
   }
   render() {
     const { style, links } = this.props

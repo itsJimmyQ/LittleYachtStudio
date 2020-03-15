@@ -18,7 +18,7 @@ class Contact extends Component {
               <Info>
                 <InfoLink
                   href={
-                    "mailto:littleyachtstudio@gmail.com?subject = Questions regarding your service&body = Message"
+                    "mailto:littleyachtstudio@gmail.com?subject=Questions regarding your service.&body = Message"
                   }
                   target="_blank"
                 >
@@ -28,7 +28,9 @@ class Contact extends Component {
             </ContactDetail>
             <ContactDetail>
               <Label> Whatsapp </Label>
-              <Info> (+31) 0636 067 350 </Info>
+              <Info>
+                <InfoLink href="tel:0031636067350">(+31) 636 067 350</InfoLink>
+              </Info>
             </ContactDetail>
             <ContactDetail>
               <Label> Instagram </Label>
