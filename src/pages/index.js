@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-// import { TweenLite, TimelineLite } from "gsap"
 
 import Shell from "../components/Shell"
 // import Carousel from "../components/Carousel"
@@ -10,38 +9,17 @@ import Contact from "../components/Contact"
 class indexPage extends Component {
   constructor(props) {
     super(props)
-
-    this.heading = null
-    this.showcase = null
-    // this.myTween = new TimelineLite({ paused: true })
   }
 
-  componentDidMount() {
-    // this.myTween
-    //   .from(this.heading, 0.4, {
-    //     y: 10,
-    //     delay: 0.4,
-    //     ease: "power3.In",
-    //     opacity: 0,
-    //   })
-    //   .from(this.subheading, 0.4, {
-    //     y: 10,
-    //     delay: 0.4,
-    //     ease: "power3.In",
-    //     opacity: 0,
-    //   })
-    //   .play()
-  }
   render() {
     return (
       <Shell
         title={"Home"}
         headerLinks={["WORK", "CONTACT"]}
         bottomCheck={true}
-        id={"work-section"}
       >
         <Wrapper>
-          <Heading ref={h1 => (this.heading = h1)}>
+          <Heading>
             An <Bold>Interior & Lifestyle </Bold>photographer based in
             <br />
             <Bold>Eindhoven, The Netherlands.</Bold>
@@ -50,11 +28,7 @@ class indexPage extends Component {
         {/* <Carousel /> */}
         <Wrapper>
           <Subheading ref={h1 => (this.heading = h1)}>Recent Works</Subheading>
-          <Showcase
-            ref={div => {
-              this.showcase = div
-            }}
-          />
+          <Showcase />
         </Wrapper>
         <Contact />
       </Shell>

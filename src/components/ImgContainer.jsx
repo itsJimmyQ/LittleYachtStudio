@@ -1,17 +1,26 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
+import Zoom from "react-medium-image-zoom"
+import "../../node_modules/react-medium-image-zoom/dist/styles.css"
+
 class ImgContainer extends Component {
   render() {
     const { image } = this.props
     return (
-      <Container>
-        <Img
-          loading={"eager"}
-          fluid={image}
-          fadeIn={true}
-          backgroundColor={"#eee"}
-        />
+      <Container onContextMenu={e => e.preventDefault()}>
+        <Zoom
+          style={{
+            height: "100%",
+          }}
+        >
+          <Img
+            loading={"auto"}
+            fluid={image}
+            fadeIn={true}
+            // backgroundColor={true}
+          />
+        </Zoom>
       </Container>
     )
   }
@@ -20,7 +29,7 @@ class ImgContainer extends Component {
 export default ImgContainer
 
 const Container = styled.div`
-  height: auto;
+  height: 55vh;
   width: auto;
   background-color: #eee;
   cursor: pointer;
@@ -29,5 +38,9 @@ const Container = styled.div`
   }
   @media (max-width: 1024px) {
     z-index: -9;
+  }
+  div {
+    height: 100%;
+    width: 100%;
   }
 `

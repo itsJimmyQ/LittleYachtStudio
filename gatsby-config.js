@@ -14,6 +14,14 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-transition-link`,
     {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 75,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Little Yacht studio`,

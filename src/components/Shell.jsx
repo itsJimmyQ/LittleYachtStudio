@@ -45,7 +45,6 @@ class Shell extends Component {
 
   render() {
     const { title, headerLinks, bottomCheck, children } = this.props
-    console.log(title)
     return (
       <Container onScroll={this.onScrollHandler}>
         <SEO title={title} />

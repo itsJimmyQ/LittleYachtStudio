@@ -27,13 +27,13 @@ export const pageQuery = graphql`
   query($path: String!, $imgKey: String!) {
     images: allFile(
       filter: { sourceInstanceName: { eq: $imgKey } }
-      sort: { fields: modifiedTime, order: DESC }
+      sort: { fields: modifiedTime, order: ASC }
     ) {
       edges {
         node {
           id
           childImageSharp {
-            fluid(quality: 100) {
+            fluid(quality: 90) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -56,7 +56,6 @@ export const pageQuery = graphql`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   width: 80%;
   margin-bottom: 5vh;
@@ -65,10 +64,9 @@ const Wrapper = styled.div`
 const Heading = styled.h1`
   font-family: "Poppins", sans-serif;
   font-size: 2em;
-  font-weight: 600;
+  font-weight: 400;
   color: #28282a;
   justify-self: flex-start;
-  align-self: flex-start;
   line-height: 1.2em;
   padding-top: 14vh;
   margin-bottom: 1vh;
