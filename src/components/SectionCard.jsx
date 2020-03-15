@@ -80,9 +80,8 @@ const CardThumbnail = styled.div`
     }
   }
   @media (max-width: 414px) {
-    height: 85%;
     img {
-      border-radius: 3px;
+      border-radius: 2px;
     }
   }
 `
