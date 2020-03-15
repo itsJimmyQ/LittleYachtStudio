@@ -34,6 +34,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: "2524393047775746",
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images-thumbnail`,
