@@ -76,6 +76,6 @@ const Container = styled.section`
 
   @media (max-width: 414px) {
     grid-template-columns: repeat(auto-fill, minmax(80%, 1fr));
-    grid-row-gap: 0;
+    grid-row-gap: 1vh;
   }
 `

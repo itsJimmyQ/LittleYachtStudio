@@ -9,8 +9,8 @@ class Contact extends Component {
           <Subheading> Interesed? </Subheading>
           <Heading> Contact us! </Heading>
           <Description>
-            We are more than happy to answer any inquery or collaboration
-            request within 1 working day using the contacts below.
+            We are more than happy to answer any inquiry or collaboration
+            request within <b>one</b> working day using the contacts below.
           </Description>
           <ContactSubsection>
             <ContactDetail>
