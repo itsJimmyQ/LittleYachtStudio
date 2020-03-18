@@ -47,7 +47,7 @@ const SubHeading = styled.h2`
   }
 
   @media (max-width: 414px) {
-    width: 80%;
+    width: 60%;
     font-size: 5vw;
   }
 `

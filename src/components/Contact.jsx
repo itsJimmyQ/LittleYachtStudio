@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
+import { BrowserView } from "react-device-detect"
 
 class Contact extends Component {
   render() {
@@ -9,8 +10,16 @@ class Contact extends Component {
           <Subheading> Interesed? </Subheading>
           <Heading> Contact us! </Heading>
           <Description>
+            <BrowserView>
+              Have you just launched a product? Do you own a business? Are you
+              in love with your newest outfits?
+              <br />
+              Reach out to us for a creative & professional set of photographs!
+              <br />
+              <br />
+            </BrowserView>
             We are more than happy to answer any inquiry or collaboration
-            request within <b>one</b> working day using the contacts below.
+            request within one working day using the contacts below.
           </Description>
           <ContactSubsection>
             <ContactDetail>
@@ -111,6 +120,9 @@ const Description = styled.p`
   font-size: 1.1em;
   width: 60%;
   line-height: 1.5em;
+  div {
+    color: white;
+  }
 
   @media (max-width: 1024px) {
     width: 100%;
@@ -138,6 +150,10 @@ const ContactSubsection = styled.div`
     grid-column-gap: 10vw;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
+`
+
+const Bold = styled.b`
+  color: white;
 `
 
 const Label = styled.label`

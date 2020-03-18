@@ -6,4 +6,5 @@ description: "Photographs from different events with a variety of themes. "
 key: "event"
 thumbnail: "../images/thumbnail/04.jpg"
 imgKey: "images-event"
+sortKey: "4"
 ---

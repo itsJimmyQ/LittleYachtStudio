@@ -15,18 +15,21 @@ class Showcase extends Component {
         <StaticQuery
           query={graphql`
             query {
-              sections: allMarkdownRemark {
+              sections: allMarkdownRemark(
+                sort: { fields: frontmatter___sortKey, order: ASC }
+              ) {
                 edges {
                   node {
                     frontmatter {
                       date
+                      description
+                      imgKey
+                      key
                       path
                       title
-                      description
                       thumbnail {
-                        id
                         childImageSharp {
-                          fluid(quality: 100) {
+                          fluid(quality: 90) {
                             ...GatsbyImageSharpFluid
                           }
                         }

@@ -6,4 +6,5 @@ description: "Our favourite shots of portrature."
 key: "portrait"
 thumbnail: "../images/thumbnail/01.jpg"
 imgKey: "images-portrait"
+sortKey: "2"
 ---

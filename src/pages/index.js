@@ -20,7 +20,7 @@ class indexPage extends Component {
       >
         <Wrapper>
           <Heading>
-            An <Bold>Interior & Lifestyle </Bold>photographer based in
+            An <Bold>Interior & Product </Bold>photographer based in
             <br />
             <Bold>Eindhoven, The Netherlands.</Bold>
           </Heading>
