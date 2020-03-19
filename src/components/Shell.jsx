@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 
-import Header from "./Header"
+import Header from "./header/Header"
 import SEO from "./seo"
 import Footer from "./Footer"
 

@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import styled from "styled-components"
 
 import Shell from "../components/Shell"
-// import Carousel from "../components/Carousel"
+import Carousel from "../components/carousel/Carousel"
 import Showcase from "../components/Showcase"
 import Contact from "../components/Contact"
 
@@ -25,7 +25,7 @@ class indexPage extends Component {
             <Bold>Eindhoven, The Netherlands.</Bold>
           </Heading>
         </Wrapper>
-        {/* <Carousel /> */}
+        <Carousel />
         <Wrapper>
           <Subheading ref={h1 => (this.heading = h1)}>Recent Works</Subheading>
           <Showcase />

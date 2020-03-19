@@ -10,14 +10,6 @@ class Contact extends Component {
           <Subheading> Interesed? </Subheading>
           <Heading> Contact us! </Heading>
           <Description>
-            <BrowserView>
-              Have you just launched a product? Do you own a business? Are you
-              in love with your newest outfits?
-              <br />
-              Reach out to us for a creative & professional set of photographs!
-              <br />
-              <br />
-            </BrowserView>
             We are more than happy to answer any inquiry or collaboration
             request within one working day using the contacts below.
           </Description>
