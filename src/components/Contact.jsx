@@ -7,7 +7,7 @@ class Contact extends Component {
     return (
       <Container id={"contact-section"}>
         <Wrapper>
-          <Subheading> Interesed? </Subheading>
+          <Subheading> Are you interesed? </Subheading>
           <Heading> Contact us! </Heading>
           <Description>
             We are more than happy to answer any inquiry or collaboration
