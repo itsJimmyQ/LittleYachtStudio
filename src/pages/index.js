@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import styled from "styled-components"
 
 import Shell from "../components/Shell"
-import Carousel from "../components/carousel/Carousel"
 import Showcase from "../components/Showcase"
 import Contact from "../components/Contact"
 
