@@ -5,6 +5,8 @@ module.exports = {
     author: `iamjimmyqian`,
     siteName: `Little Yacht studio`,
     siteUrl: `https://littleyacht.studio/`,
+    twitterTitle: `Little Yacht studio`,
+    twitterUrl: `https://littleyacht.studio/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -77,8 +79,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/markdown-pages`,
+        name: `showcase-pages`,
+        path: `${__dirname}/src/showcase-markdown`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

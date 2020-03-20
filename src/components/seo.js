@@ -21,13 +21,21 @@ function SEO({ lang, meta, title }) {
             author
             siteName
             siteUrl
+            twitterTitle
+            twitterUrl
           }
         }
       }
     `
   )
 
-  const { description, author, siteName, siteUrl } = site.siteMetadata
+  const {
+    description,
+    siteName,
+    siteUrl,
+    twitterName,
+    twitterUrl,
+  } = site.siteMetadata
   return (
     <Helmet
       htmlAttributes={{
@@ -59,6 +67,14 @@ function SEO({ lang, meta, title }) {
         {
           property: `og:site_name`,
           content: siteName,
+        },
+        {
+          property: `twitter:title`,
+          content: twitterName,
+        },
+        {
+          property: `twitter:url`,
+          content: twitterUrl,
         },
       ].concat(meta)}
     />

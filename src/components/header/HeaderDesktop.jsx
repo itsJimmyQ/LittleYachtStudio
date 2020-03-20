@@ -117,7 +117,7 @@ const NavLink = styled.span`
     font-size: 2.5vw;
   }
   @media (max-width: 414px) {
-    margin: 0 10px;
+    margin: 0 15px;
     font-size: 3vw;
   }
 `

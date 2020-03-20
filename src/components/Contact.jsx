@@ -7,11 +7,10 @@ class Contact extends Component {
     return (
       <Container id={"contact-section"}>
         <Wrapper>
-          <Subheading> Are you interesed? </Subheading>
-          <Heading> Contact us! </Heading>
+          <Heading> Contact me! </Heading>
           <Description>
-            We are more than happy to answer any inquiry or collaboration
-            request within one working day using the contacts below.
+            I am more than happy to answer any inquiry or collaboration request
+            within one working day using the contacts below.
           </Description>
           <ContactSubsection>
             <ContactDetail>
@@ -82,12 +81,13 @@ const Subheading = styled.h2`
   margin-bottom: 10px;
 
   @media (max-width: 1024px) {
-    font-size: 3vw;
+    font-weight: 300;
+    font-size: 3.5vw;
     margin-bottom: 0;
   }
 
   @media (max-width: 414px) {
-    font-size: 3.5vw;
+    font-size: 4vw;
     margin-bottom: 0;
   }
 `

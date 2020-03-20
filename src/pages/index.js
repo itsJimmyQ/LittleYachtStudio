@@ -56,7 +56,8 @@ const Heading = styled.h1`
   z-index: -9;
 
   @media (max-width: 1024px) {
-    font-size: 5vw;
+    font-weight: 300;
+    font-size: 4.5vw;
     text-align: left;
   }
 
@@ -67,7 +68,7 @@ const Heading = styled.h1`
 const Subheading = styled.h2`
   font-family: "Poppins", sans-serif;
   font-size: 2em;
-  font-weight: 600;
+  font-weight: 400;
   justify-self: flex-start;
   margin-bottom: 2vh;
   display: flex;
@@ -75,6 +76,7 @@ const Subheading = styled.h2`
   @media (max-width: 1024px) {
     font-size: 4.5vw;
     text-align: center;
+    font-weight: 500;
   }
 
   @media (max-width: 414px) {

@@ -40,9 +40,6 @@ export default SectionCard
 const Container = styled.div`
   height: 75vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin-bottom: 3vh;
   z-index: 9;
 
@@ -51,9 +48,9 @@ const Container = styled.div`
     z-index: 9;
   }
   @media (max-width: 414px) {
-    height: 70vh;
-    border-radius: 2px;
-    margin-bottom: 5vh;
+    height: 65vh;
+    border-radius: 5px;
+    margin-bottom: 0;
   }
 `
 
@@ -73,23 +70,19 @@ const CardThumbnail = styled.div`
   }
 
   @media (max-width: 1024px) {
-    height: 90%;
     filter: grayscale(0%);
+    height: 85%;
     img {
-      border-radius: 5px;
-    }
-  }
-  @media (max-width: 414px) {
-    img {
-      border-radius: 2px;
+      border-radius: 3px;
     }
   }
 `
 
 const OverlayText = styled.h1`
   position: absolute;
-  width: 90%;
-  font-size: 3vw;
+  width: auto;
+  font-size: 2.5vw;
+  width: 60%;
   bottom: 8%;
   left: 8%;
   opacity: 0;
@@ -107,7 +100,6 @@ const CardHeading = styled.h2`
   font-family: "Poppins", sans-serif;
   font-size: 1.4em;
   margin: 2% 0 1% 0;
-
   @media (max-width: 1024px) {
     font-size: 4vw;
     margin-bottom: 5px;
