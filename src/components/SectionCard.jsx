@@ -28,7 +28,7 @@ class SectionCard extends Component {
         </CardThumbnail>
         {isMobile && [
           <CardHeading> {heading} </CardHeading>,
-          <CardDesc>{description}</CardDesc>,
+          // <CardDesc>{description}</CardDesc>,
         ]}
       </Container>
     )
