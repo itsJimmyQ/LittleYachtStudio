@@ -1,19 +1,11 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import {
-  isMobile,
-  isBrowser,
-  BrowserView,
-  MobileView,
-} from "react-device-detect"
+import { isMobile, isBrowser } from "react-device-detect"
 
 class HeaderDesktop extends Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
-    const { style, links } = this.props
+    const { style } = this.props
     return (
       <ContainerDesktop style={style}>
         <LogoContainer>
@@ -31,13 +23,12 @@ class HeaderDesktop extends Component {
           </Anchor>
         </LogoContainer>
         <NavLinkContainer>
-          {links.map((link, index) => {
-            return (
-              <NavLink key={index}>
-                <Link to={`/#${link.toLowerCase()}-section`}> {link} </Link>
-              </NavLink>
-            )
-          })}
+          <NavLink key={1}>
+            <Link> WORK </Link>
+          </NavLink>
+          <NavLink key={2}>
+            <Link to={"/#contact"}> CONTACT </Link>
+          </NavLink>
         </NavLinkContainer>
       </ContainerDesktop>
     )
@@ -52,7 +43,6 @@ const ContainerDesktop = styled.div`
   z-index: 999;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  font-family: "Poppins", sans-serif;
   display: flex;
   background-color: white;
   flex-direction: row;

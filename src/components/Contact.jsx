@@ -1,16 +1,15 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { BrowserView } from "react-device-detect"
 
 class Contact extends Component {
   render() {
     return (
-      <Container id={"contact-section"}>
+      <Container id={"contact"}>
         <Wrapper>
           <Heading> Contact me! </Heading>
           <Description>
-            I am more than happy to answer any inquiry or collaboration request
-            within one working day using the contacts below.
+            We are more than happy to answer any inquiry or collaboration
+            request within one working day using the contacts below.
           </Description>
           <ContactSubsection>
             <ContactDetail>

@@ -156,7 +156,7 @@ const NavLink = styled.h2`
   transform: translateY(15%);
   a {
     text-decoration: none;
-    font-family: "Abril Fatface", cursive;
+    font-family: "Libre Baskerville", serif;
   }
   user-select: none;
 `

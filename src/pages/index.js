@@ -19,7 +19,7 @@ class indexPage extends Component {
       >
         <Wrapper>
           <Heading>
-            An <Bold>Interior & Portrait </Bold>photographer based in
+            An <Bold>Interior & Portrait </Bold>photography firm based in
             <br />
             <Bold>Eindhoven, The Netherlands.</Bold>
           </Heading>
@@ -62,7 +62,9 @@ const Heading = styled.h1`
   }
 
   @media (max-width: 414px) {
-    font-size: 5.3vw;
+    font-size: 5vw;
+    justify-self: center;
+    text-align: center;
   }
 `
 const Subheading = styled.h2`
@@ -81,6 +83,8 @@ const Subheading = styled.h2`
 
   @media (max-width: 414px) {
     font-size: 5vw;
+    justify-self: center;
+    text-align: center;
   }
 `
 

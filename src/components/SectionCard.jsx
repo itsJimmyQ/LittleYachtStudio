@@ -23,13 +23,10 @@ class SectionCard extends Component {
               backgroundColor={true}
               style={{ width: "100%", height: "100%" }}
             />
+            <Overlay />
             <OverlayText>{heading}</OverlayText>
           </Link>
         </CardThumbnail>
-        {isMobile && [
-          <CardHeading> {heading} </CardHeading>,
-          // <CardDesc>{description}</CardDesc>,
-        ]}
       </Container>
     )
   }
@@ -44,11 +41,11 @@ const Container = styled.div`
   z-index: 9;
 
   @media (max-width: 1024px) {
-    height: 70vh;
+    height: 50vh;
     z-index: 9;
   }
   @media (max-width: 414px) {
-    height: 65vh;
+    height: 40vh;
     border-radius: 5px;
     margin-bottom: 0;
   }
@@ -71,17 +68,31 @@ const CardThumbnail = styled.div`
 
   @media (max-width: 1024px) {
     filter: grayscale(0%);
-    height: 85%;
+    height: 100%;
     img {
-      border-radius: 3px;
+      border-radius: 8px;
     }
+  }
+`
+
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0;
+  border-radius: 8px;
+  @media (max-width: 1024px) {
+    opacity: 0.2;
   }
 `
 
 const OverlayText = styled.h1`
   position: absolute;
   width: auto;
-  font-size: 2.5vw;
+  font-size: 3vw;
   width: 60%;
   bottom: 8%;
   left: 8%;
@@ -92,7 +103,11 @@ const OverlayText = styled.h1`
   line-height: 1em;
   user-select: none;
   @media (max-width: 1024px) {
-    visibility: hidden;
+    /* visibility: hidden; */
+    opacity: 1;
+    font-weight: 600;
+    line-height: 25px;
+    font-size: 5vw;
   }
 `
 
@@ -102,12 +117,13 @@ const CardHeading = styled.h2`
   margin: 2% 0 1% 0;
   @media (max-width: 1024px) {
     font-size: 4vw;
-    margin-bottom: 5px;
+    font-weight: 400;
+    text-align: center;
   }
 
   @media (max-width: 414px) {
     font-size: 4.5vw;
-    margin-bottom: 0;
+    margin-top: 0;
   }
 `
 
