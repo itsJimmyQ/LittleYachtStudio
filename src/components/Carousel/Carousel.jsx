@@ -83,7 +83,7 @@ const ImgWrapper = styled.section`
   @media (max-width: 1024px) {
     padding: 10px 25%;
   }
-  @media (max-width: 414) {
+  @media (max-width: 414px) {
     padding: 10px 12%;
   }
 `
