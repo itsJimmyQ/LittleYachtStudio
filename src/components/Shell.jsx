@@ -22,6 +22,8 @@ class Shell extends Component {
       offsetMode: 0,
     }
 
+    this.cursor = React.createRef()
+
     this.onScrollHandler = this.onScrollHandler.bind(this)
   }
 
@@ -42,7 +44,6 @@ class Shell extends Component {
       }
     }
   }
-
   render() {
     const { title, headerLinks, bottomCheck, children } = this.props
     return (

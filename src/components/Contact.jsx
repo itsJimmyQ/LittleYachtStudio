@@ -36,9 +36,9 @@ class Contact extends Component {
               <Info>
                 <InfoLink
                   target="_blank"
-                  href={"https://www.instagram.com/iamjimmyqian/"}
+                  href={"https://www.instagram.com/littleyachtstudio/"}
                 >
-                  @littleyachtstudio
+                  @LittleYachtStudio
                 </InfoLink>
               </Info>
             </ContactDetail>
@@ -150,7 +150,7 @@ const Bold = styled.b`
 const Label = styled.label`
   font-size: 0.9em;
   color: white;
-  opacity: 0.5;
+  opacity: 0.4;
   font-weight: 500;
 
   @media (max-width: 1024px) {

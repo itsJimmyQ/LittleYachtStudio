@@ -28,10 +28,9 @@ class Carousel extends Component {
       <Container>
         <Slider
           ref={c => (this.slider = c)}
-          autoplay={true}
-          autoplaySpeed={1500}
+          autoplay={false}
           slidesToShow={5}
-          draggable={false}
+          draggable={true}
           swipeToSlide={true}
           infinite={true}
           responsive={[
@@ -40,6 +39,7 @@ class Carousel extends Component {
               settings: {
                 arrows: false,
                 slidesToShow: 1,
+                slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 2000,
               },
@@ -62,9 +62,9 @@ class Carousel extends Component {
           })}
         </Slider>
         <SliderButtonContainer>
-          <Button onClick={this.onClickPrev}>Prev</Button>
-          <Button onClick={this.onClickPause}>Pause</Button>
-          <Button onClick={this.onClickNext}>Next</Button>
+          <Button onClick={this.onClickPrev}>👈🏻</Button>
+          {/* <Button onClick={this.onClickPause}>Pause</Button> */}
+          <Button onClick={this.onClickNext}>👉🏻</Button>
         </SliderButtonContainer>
       </Container>
     )
@@ -91,7 +91,7 @@ const SliderButtonContainer = styled.div`
   display: block;
   margin: 0 auto;
   width: 10%;
-  height: 5vh;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -107,8 +107,7 @@ const Button = styled.h1`
   justify-content: center;
   align-items: center;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 35px;
   cursor: pointer;
   user-select: none;
-  text-decoration: underline;
 `

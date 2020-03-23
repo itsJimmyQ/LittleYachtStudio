@@ -44,7 +44,7 @@ const ContainerDesktop = styled.div`
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   display: flex;
-  background-color: white;
+  background-color: none;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;

@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 import Img from "gatsby-image"
-import { isMobile, isBrowser } from "react-device-detect"
 
 class SectionCard extends Component {
   constructor(props) {
