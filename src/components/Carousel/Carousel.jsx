@@ -36,7 +36,7 @@ class Carousel extends Component {
           infinite={true}
           responsive={[
             {
-              breakpoint: 768,
+              breakpoint: 1024,
               settings: {
                 arrows: false,
                 slidesToShow: 1,
@@ -81,6 +81,9 @@ const Container = styled.section`
 const ImgWrapper = styled.section`
   height: 100%;
   @media (max-width: 1024px) {
+    padding: 10px 25%;
+  }
+  @media (max-width: 414) {
     padding: 10px 12%;
   }
 `
