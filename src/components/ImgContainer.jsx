@@ -32,8 +32,8 @@ class ImgContainer extends Component {
 export default ImgContainer
 
 const Container = styled.div`
-  /* height: 55vh; */
   width: auto;
+  height: 100%;
   background-color: #eee;
   cursor: ${props => (props.ifZoom ? "pointer" : "default")};
   @media (max-width: 1024px) {

@@ -41,7 +41,7 @@ class Carousel extends Component {
                 arrows: false,
                 slidesToShow: 1,
                 autoplay: true,
-                autoplaySpeed: 1500,
+                autoplaySpeed: 2000,
               },
             },
           ]}

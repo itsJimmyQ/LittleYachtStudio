@@ -49,7 +49,7 @@ const Container = styled.div`
   @media (max-width: 1024px) {
     height: 62vh;
     font-size: 5vw;
-    margin-bottom: 1vh;
+    /* margin-bottom: 3vh; */
     text-align: center;
   }
 `

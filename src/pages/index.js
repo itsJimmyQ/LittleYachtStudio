@@ -64,6 +64,7 @@ const Heading = styled.h1`
 
   @media (max-width: 414px) {
     font-size: 5vw;
+    line-height: 25px;
     justify-self: center;
     text-align: center;
   }
@@ -84,7 +85,6 @@ const Subheading = styled.h2`
 
   @media (max-width: 414px) {
     font-size: 5vw;
-    margin-bottom: 1vh;
     justify-self: center;
     text-align: center;
   }
