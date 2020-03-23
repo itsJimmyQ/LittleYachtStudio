@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Shell from "../components/Shell"
 import Showcase from "../components/Showcase"
 import Contact from "../components/Contact"
+import CarouselWrapper from "../components/Carousel/CarouselWrapper"
 
 class indexPage extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class indexPage extends Component {
             <Bold>Eindhoven, The Netherlands.</Bold>
           </Heading>
         </Wrapper>
-        {/* <Carousel /> */}
+        <CarouselWrapper />
         <Wrapper>
           <Subheading ref={h1 => (this.heading = h1)}>Recent Works</Subheading>
           <Showcase />
@@ -83,6 +84,7 @@ const Subheading = styled.h2`
 
   @media (max-width: 414px) {
     font-size: 5vw;
+    margin-bottom: 1vh;
     justify-self: center;
     text-align: center;
   }

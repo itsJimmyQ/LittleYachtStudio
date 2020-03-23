@@ -11,7 +11,7 @@ class SectionCard extends Component {
   }
 
   render() {
-    const { heading, description, path } = this.props
+    const { heading, path } = this.props
     return (
       <Container onContextMenu={e => e.preventDefault()}>
         <CardThumbnail>

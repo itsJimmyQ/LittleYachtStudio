@@ -24,7 +24,7 @@ class HeaderDesktop extends Component {
         </LogoContainer>
         <NavLinkContainer>
           <NavLink key={1}>
-            <Link> WORK </Link>
+            <Link to={"/"}> HOME </Link>
           </NavLink>
           <NavLink key={2}>
             <Link to={"/#contact"}> CONTACT </Link>

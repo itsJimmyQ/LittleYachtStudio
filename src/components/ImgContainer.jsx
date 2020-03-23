@@ -6,17 +6,24 @@ import "../../node_modules/react-medium-image-zoom/dist/styles.css"
 
 class ImgContainer extends Component {
   render() {
-    const { image } = this.props
+    const { image, height, ifZoom } = this.props
     return (
-      <Container onContextMenu={e => e.preventDefault()}>
-        <Zoom
-          style={{
-            height: "100%",
-          }}
-          overlayBgColorEnd={"rgba(0, 0, 0, 0.6"}
-        >
-          <Img loading={"auto"} fluid={image} fadeIn={true} />
-        </Zoom>
+      <Container
+        ifZoom={ifZoom}
+        style={{ height }}
+        onContextMenu={e => e.preventDefault()}
+      >
+        {ifZoom && (
+          <Zoom
+            style={{
+              height: "100%",
+            }}
+            overlayBgColorEnd={"rgba(0, 0, 0, 0.6"}
+          >
+            <Img loading={"auto"} fluid={image} fadeIn={true} />
+          </Zoom>
+        )}
+        {!ifZoom && <Img loading={"auto"} fluid={image} fadeIn={true} />}
       </Container>
     )
   }
@@ -25,16 +32,12 @@ class ImgContainer extends Component {
 export default ImgContainer
 
 const Container = styled.div`
-  height: 55vh;
+  /* height: 55vh; */
   width: auto;
   background-color: #eee;
-  cursor: pointer;
-  div {
-    height: 100%;
-  }
+  cursor: ${props => (props.ifZoom ? "pointer" : "default")};
   @media (max-width: 1024px) {
     z-index: -9;
-    height: 65vh;
   }
   div {
     height: 100%;

@@ -1,20 +1,37 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { StaticQuery, graphql } from "gatsby"
 import Slider from "react-slick"
 import "./slick.css"
 import "./slick-theme.css"
+import ImgContainer from "../ImgContainer"
 
 class Carousel extends Component {
+  constructor(props) {
+    super(props)
+    this.onClickPrev = this.onClickPrev.bind(this)
+    this.onClickPause = this.onClickPause.bind(this)
+    this.onClickNext = this.onClickNext.bind(this)
+  }
+  onClickPrev() {
+    console.log("onclick")
+    this.slider.slickPrev()
+  }
+  onClickNext() {
+    this.slider.slickNext()
+  }
+  onClickPause() {
+    this.slider.slickPause()
+  }
   render() {
+    const { images } = this.props
     return (
       <Container>
-        {/* TODO: implement next&prev buttons */}
         <Slider
-          dots={true}
-          // autoplay={true}
-          // autoplaySpeed={2000}
+          ref={c => (this.slider = c)}
+          autoplay={true}
+          autoplaySpeed={1500}
           slidesToShow={5}
+          draggable={false}
           swipeToSlide={true}
           infinite={true}
           responsive={[
@@ -23,38 +40,32 @@ class Carousel extends Component {
               settings: {
                 arrows: false,
                 slidesToShow: 1,
+                autoplay: true,
+                autoplaySpeed: 1500,
               },
             },
           ]}
         >
-          <Card>
-            <SubContainer />
-          </Card>
-          <Card>
-            <SubContainer />
-          </Card>
-          <Card>
-            <SubContainer />
-          </Card>
-          <Card>
-            <SubContainer />
-          </Card>
-          <Card>
-            <SubContainer />
-          </Card>
-          <Card>
-            <SubContainer />
-          </Card>
-          <Card>
-            <SubContainer />
-          </Card>
-          <Card>
-            <SubContainer />
-          </Card>
-          <Card>
-            <SubContainer />
-          </Card>
+          {images.edges.map((edge, index) => {
+            const node = edge.node
+            const image = node.childImageSharp
+            return (
+              <ImgWrapper>
+                <ImgContainer
+                  key={node.id}
+                  image={image.fluid}
+                  height={"60vh"}
+                  ifZoom={false}
+                />
+              </ImgWrapper>
+            )
+          })}
         </Slider>
+        <SliderButtonContainer>
+          <Button onClick={this.onClickPrev}>Prev</Button>
+          <Button onClick={this.onClickPause}>Pause</Button>
+          <Button onClick={this.onClickNext}>Next</Button>
+        </SliderButtonContainer>
       </Container>
     )
   }
@@ -63,28 +74,38 @@ class Carousel extends Component {
 export default Carousel
 
 const Container = styled.section`
-  height: 63vh;
-  width: 110%;
-  margin-bottom: 5vh;
-  @media (max-width: 1024px) {
-    height: 65vh;
-    font-size: 5vw;
-    text-align: center;
-  }
-`
-const Card = styled.div`
-  padding: 0px;
   height: 100%;
   width: 100%;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  background-color: #ddd;
-  /* box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3); */
 `
 
-const SubContainer = styled.div`
-  height: 90%;
-  width: 90%;
-  background-color: turquoise;
+const ImgWrapper = styled.section`
+  height: 100%;
+  @media (max-width: 1024px) {
+    padding: 10px 12%;
+  }
+`
+const SliderButtonContainer = styled.div`
+  display: block;
+  margin: 0 auto;
+  width: 10%;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 1024px) {
+    visibility: hidden;
+  }
+`
+
+const Button = styled.h1`
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: underline;
 `
