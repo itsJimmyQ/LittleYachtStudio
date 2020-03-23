@@ -43,6 +43,9 @@ const Wrapper = styled.div`
   flex-direction: column;
   width: 80%;
   margin-bottom: 5vh;
+  @media (max-width: 1024px) {
+    margin-bottom: 3vh;
+  }
 `
 
 const Heading = styled.h1`
