@@ -70,7 +70,7 @@ const LogoAlt = styled.h1`
   font-weight: 300;
   font-size: 2em;
   @media (max-width: 1024px) {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
   @media (max-width: 414px) {
     font-size: 6vw;
@@ -105,7 +105,7 @@ const NavLink = styled.span`
   }
 
   @media (max-width: 1024px) {
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
   @media (max-width: 414px) {
     margin: 0 15px;

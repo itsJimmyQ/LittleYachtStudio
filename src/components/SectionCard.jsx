@@ -22,9 +22,9 @@ class SectionCard extends Component {
               backgroundColor={true}
               style={{ width: "100%", height: "100%" }}
             />
-            <Overlay />
             <OverlayText>{heading}</OverlayText>
           </Link>
+          <Overlay />
         </CardThumbnail>
       </Container>
     )
@@ -85,6 +85,8 @@ const Overlay = styled.div`
   border-radius: 8px;
   @media (max-width: 1024px) {
     opacity: 0.2;
+    height: 100%;
+    width: 100%;
   }
 `
 
@@ -96,6 +98,7 @@ const OverlayText = styled.h1`
   bottom: 8%;
   left: 8%;
   opacity: 0;
+  z-index: 99;
   transition: 0.2s ease-in;
   color: #fff;
   margin: 0;
