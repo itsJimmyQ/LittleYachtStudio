@@ -58,7 +58,7 @@ const LogoAlt = styled.h1`
   font-size: 2em;
 
   @media (max-width: 1024px) {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
 
   @media (max-width: 414px) {
@@ -79,7 +79,7 @@ const InfoSection = styled.section`
 
   @media (max-width: 1024px) {
     width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-column-gap: 2vw;
     grid-row-gap: 1vh;
   }
@@ -95,7 +95,7 @@ const Info = styled.h3`
   margin-bottom: 0px;
 
   @media (max-width: 1024px) {
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
   @media (max-width: 414px) {
     font-size: 3.5vw;

@@ -72,7 +72,7 @@ const Heading = styled.h1`
   margin-bottom: 1vh;
 
   @media (max-width: 1024px) {
-    font-size: 5vw;
+    font-size: 3vw;
     text-align: center;
   }
 
@@ -90,7 +90,7 @@ const Desc = styled.p`
 
   @media (max-width: 1024px) {
     text-align: center;
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
   @media (max-width: 414px) {

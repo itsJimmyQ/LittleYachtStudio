@@ -35,6 +35,7 @@ const Container = styled.div`
   width: auto;
   height: 100%;
   background-color: #eee;
+  border-radius: 3px;
   cursor: ${props => (props.ifZoom ? "pointer" : "default")};
   @media (max-width: 1024px) {
     z-index: -9;
@@ -42,5 +43,6 @@ const Container = styled.div`
   div {
     height: 100%;
     width: 100%;
+    border-radius: 3px;
   }
 `

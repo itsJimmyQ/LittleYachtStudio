@@ -37,9 +37,8 @@ class Carousel extends Component {
             {
               breakpoint: 1367,
               settings: {
-                arrows: false,
                 slidesToShow: 3,
-                slidesToScroll: 1,
+                // slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 2000,
               },
@@ -47,11 +46,10 @@ class Carousel extends Component {
             {
               breakpoint: 1025,
               settings: {
-                arrows: false,
                 slidesToShow: 1,
-                slidesToScroll: 1,
+                // slidesToScroll: 1,
                 autoplay: true,
-                autoplaySpeed: 2000,
+                autoplaySpeed: 2500,
               },
             },
           ]}

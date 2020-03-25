@@ -81,7 +81,7 @@ const Subheading = styled.h2`
 
   @media (max-width: 1024px) {
     font-weight: 300;
-    font-size: 3.5vw;
+    font-size: 2.5vw;
     margin-bottom: 0;
   }
 
@@ -97,7 +97,7 @@ const Heading = styled.h1`
   margin-bottom: 10px;
 
   @media (max-width: 1024px) {
-    font-size: 5.5vw;
+    font-size: 4.5vw;
   }
 
   @media (max-width: 414px) {
@@ -117,7 +117,7 @@ const Description = styled.p`
 
   @media (max-width: 1024px) {
     width: 100%;
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
   @media (max-width: 414px) {
@@ -143,18 +143,18 @@ const ContactSubsection = styled.div`
   }
 `
 
-const Bold = styled.b`
-  color: white;
-`
-
 const Label = styled.label`
   font-size: 0.9em;
   color: white;
   opacity: 0.4;
   font-weight: 500;
+  @media (max-width: 1366px) {
+    font-size: 2vw;
+    text-decoration: none;
+  }
 
   @media (max-width: 1024px) {
-    font-size: 2.5vw;
+    font-size: 1.5vw;
   }
 
   @media (max-width: 414px) {
@@ -176,9 +176,13 @@ const Info = styled.h3`
   a {
     text-decoration: none;
   }
+  @media (max-width: 1366px) {
+    font-size: 3vw;
+    text-decoration: none;
+  }
 
   @media (max-width: 1024px) {
-    font-size: 3vw;
+    font-size: 2vw;
     text-decoration: none;
   }
 

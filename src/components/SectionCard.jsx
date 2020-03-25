@@ -22,8 +22,8 @@ class SectionCard extends Component {
               backgroundColor={true}
               style={{ width: "100%", height: "100%" }}
             />
-            {/* <OverlayText>{heading}</OverlayText>
-            <Overlay /> */}
+            <OverlayText>{heading}</OverlayText>
+            <Overlay />
           </CardThumbnail>
         </Link>
       </Container>
@@ -46,7 +46,7 @@ const Container = styled.div`
   }
   @media (max-width: 414px) {
     height: 40vh;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-bottom: 0;
   }
 `
@@ -54,6 +54,7 @@ const Container = styled.div`
 const CardThumbnail = styled.div`
   height: 100%;
   width: 100%;
+  position: relative;
   transition: 0.2s ease-in;
   filter: grayscale(80%);
 
@@ -67,10 +68,10 @@ const CardThumbnail = styled.div`
   }
 
   @media (max-width: 1024px) {
-    filter: grayscale(40%);
+    filter: grayscale(0%);
     height: 100%;
     img {
-      border-radius: 8px;
+      border-radius: 3px;
     }
   }
 `
@@ -88,8 +89,6 @@ const Overlay = styled.div`
   @media (max-width: 1024px) {
     visibility: visible;
     opacity: 0.2;
-    height: 100%;
-    width: 100%;
   }
 `
 
@@ -112,6 +111,9 @@ const OverlayText = styled.h1`
     line-height: 1em;
     opacity: 1;
     font-weight: 600;
+    font-size: 4vw;
+  }
+  @media (max-width: 414px) {
     font-size: 5.5vw;
   }
 `
