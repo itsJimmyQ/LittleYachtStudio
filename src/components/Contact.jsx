@@ -6,7 +6,7 @@ class Contact extends Component {
     return (
       <Container id={"contact"}>
         <Wrapper>
-          <Heading> Contact me! </Heading>
+          <Heading> Contact us! </Heading>
           <Description>
             We are more than happy to answer any inquiry or collaboration
             request within one working day using the contacts below.

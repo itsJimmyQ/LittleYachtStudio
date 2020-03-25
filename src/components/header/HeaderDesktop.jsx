@@ -43,6 +43,7 @@ const ContainerDesktop = styled.div`
   z-index: 999;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  -webkit-appearance: none;
   display: flex;
   background-color: white;
   flex-direction: row;
