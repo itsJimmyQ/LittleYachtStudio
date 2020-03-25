@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-
+import { isBrowser } from "react-device-detect"
 import Img from "gatsby-image"
 
 class SectionCard extends Component {
@@ -13,8 +13,8 @@ class SectionCard extends Component {
     const { heading, path } = this.props
     return (
       <Container onContextMenu={e => e.preventDefault()}>
-        <CardThumbnail>
-          <Link to={path}>
+        <Link to={path}>
+          <CardThumbnail>
             <Img
               loading={"eager"}
               fluid={this.props.image}
@@ -23,9 +23,9 @@ class SectionCard extends Component {
               style={{ width: "100%", height: "100%" }}
             />
             <OverlayText>{heading}</OverlayText>
-            {/* <Overlay /> */}
-          </Link>
-        </CardThumbnail>
+            <Overlay />
+          </CardThumbnail>
+        </Link>
       </Container>
     )
   }
