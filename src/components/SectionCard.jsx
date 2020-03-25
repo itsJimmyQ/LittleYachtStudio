@@ -22,8 +22,8 @@ class SectionCard extends Component {
               backgroundColor={true}
               style={{ width: "100%", height: "100%" }}
             />
-            <OverlayText>{heading}</OverlayText>
-            <Overlay />
+            {/* <OverlayText>{heading}</OverlayText>
+            <Overlay /> */}
           </CardThumbnail>
         </Link>
       </Container>
