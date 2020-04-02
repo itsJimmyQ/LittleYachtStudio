@@ -62,7 +62,7 @@ const CardThumbnail = styled.div`
     filter: grayscale(0%);
   }
 
-  &:hover > a > h1 {
+  &:hover > h1 {
     opacity: 1;
     transform: translateY(-5%);
   }
