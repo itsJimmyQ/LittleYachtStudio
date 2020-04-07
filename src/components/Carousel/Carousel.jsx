@@ -64,6 +64,7 @@ class Carousel extends Component {
                   image={image.fluid}
                   height={"60vh"}
                   ifZoom={false}
+                  loading={"lazy"}
                 />
               </ImgWrapper>
             )

@@ -6,7 +6,7 @@ import "../../node_modules/react-medium-image-zoom/dist/styles.css"
 
 class ImgContainer extends Component {
   render() {
-    const { image, height, ifZoom } = this.props
+    const { image, height, ifZoom, loading } = this.props
     return (
       <Container
         ifZoom={ifZoom}
@@ -20,7 +20,7 @@ class ImgContainer extends Component {
             }}
             overlayBgColorEnd={"rgba(0, 0, 0, 0.6"}
           >
-            <Img loading={"auto"} fluid={image} fadeIn={true} />
+            <Img loading={loading || "auto"} fluid={image} fadeIn={true} />
           </Zoom>
         )}
         {!ifZoom && <Img loading={"auto"} fluid={image} fadeIn={true} />}
