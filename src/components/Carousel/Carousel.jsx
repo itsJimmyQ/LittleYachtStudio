@@ -28,7 +28,8 @@ class Carousel extends Component {
       <Container>
         <Slider
           ref={c => (this.slider = c)}
-          autoplay={false}
+          autoplay={true}
+          autoplaySpeed={2000}
           slidesToShow={5}
           draggable={true}
           swipeToSlide={true}
@@ -70,11 +71,10 @@ class Carousel extends Component {
             )
           })}
         </Slider>
-        <SliderButtonContainer>
+        {/* <SliderButtonContainer>
           <Button onClick={this.onClickPrev}>👈🏻</Button>
-          {/* <Button onClick={this.onClickPause}>Pause</Button> */}
           <Button onClick={this.onClickNext}>👉🏻</Button>
-        </SliderButtonContainer>
+        </SliderButtonContainer> */}
       </Container>
     )
   }
