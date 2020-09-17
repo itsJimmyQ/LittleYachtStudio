@@ -20,7 +20,7 @@ class Footer extends Component {
             <Info>
               {" "}
               Created by{" "}
-              <a href="https://www.linkedin.com/in/longxiang-qian-38b381188/">
+              <a href="https://www.instagram.com/iamjimmyqian">
                 Longxiang Qian
               </a>{" "}
             </Info>

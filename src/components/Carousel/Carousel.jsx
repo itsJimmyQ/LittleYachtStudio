@@ -29,7 +29,7 @@ class Carousel extends Component {
         <Slider
           ref={c => (this.slider = c)}
           autoplay={true}
-          autoplaySpeed={2000}
+          autoplaySpeed={3000}
           slidesToShow={5}
           draggable={true}
           swipeToSlide={true}
