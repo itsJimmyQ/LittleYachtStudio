@@ -1,14 +1,9 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { isBrowser } from "react-device-detect"
 import Img from "gatsby-image"
 
 class SectionCard extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     const { heading, path } = this.props
     return (
@@ -115,37 +110,5 @@ const OverlayText = styled.h1`
   }
   @media (max-width: 414px) {
     font-size: 5.5vw;
-  }
-`
-
-const CardHeading = styled.h2`
-  font-family: "Poppins", sans-serif;
-  font-size: 1.4em;
-  margin: 2% 0 1% 0;
-  @media (max-width: 1024px) {
-    font-size: 4vw;
-    font-weight: 400;
-    text-align: center;
-  }
-
-  @media (max-width: 414px) {
-    font-size: 4.5vw;
-    margin-top: 0;
-  }
-`
-
-const CardDesc = styled.p`
-  font-family: "Montserrat", sans-serif;
-  font-size: 1em;
-  font-weight: 500;
-  display: flex;
-  margin: 0;
-
-  @media (max-width: 1024px) {
-    font-size: 3vw;
-  }
-
-  @media (max-width: 414px) {
-    font-size: 3.5vw;
   }
 `

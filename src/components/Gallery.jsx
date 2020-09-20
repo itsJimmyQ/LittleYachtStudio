@@ -3,10 +3,6 @@ import styled from "styled-components"
 import ImgContainer from "./ImgContainer"
 
 class Gallery extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     const { imgEdges } = this.props
     return (

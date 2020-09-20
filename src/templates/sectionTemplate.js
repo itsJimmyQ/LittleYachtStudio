@@ -27,7 +27,7 @@ export const pageQuery = graphql`
   query($path: String!, $imgKey: String!) {
     images: allFile(
       filter: { sourceInstanceName: { eq: $imgKey } }
-      sort: { fields: id, order: DESC }
+      sort: { fields: modifiedTime, order: DESC }
     ) {
       edges {
         node {

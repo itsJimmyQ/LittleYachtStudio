@@ -73,23 +73,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   width: 80%;
 `
-const Subheading = styled.h2`
-  color: white;
-  font-weight: 100;
-  font-size: 1.4em;
-  margin-bottom: 10px;
 
-  @media (max-width: 1024px) {
-    font-weight: 300;
-    font-size: 2.5vw;
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 414px) {
-    font-size: 4vw;
-    margin-bottom: 0;
-  }
-`
 const Heading = styled.h1`
   color: white;
   font-weight: 600;

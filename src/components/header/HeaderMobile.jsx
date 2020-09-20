@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { TweenLite } from "gsap"
 
 import HeaderBtn from "./HeaderBtn"
 

@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { MorphReplace } from "react-svg-morph"
 
 // class Cross extends Component {
 //   render() {

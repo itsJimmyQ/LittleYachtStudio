@@ -1,15 +1,13 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 
-import { isMobile, isBrowser } from "react-device-detect"
+import { isMobile } from "react-device-detect"
 
-import HeaderMobile from "./HeaderMobile"
 import HeaderDesktop from "./HeaderDesktop"
 
 class Header extends Component {
   constructor(props) {
     super(props)
-
     this.state = {
       expandHeader: false,
     }

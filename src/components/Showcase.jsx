@@ -5,10 +5,6 @@ import { StaticQuery, graphql } from "gatsby"
 import SectionCard from "./SectionCard"
 
 class Showcase extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
       <Container>

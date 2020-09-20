@@ -7,10 +7,6 @@ import Contact from "../components/Contact"
 import CarouselWrapper from "../components/Carousel/CarouselWrapper"
 
 class indexPage extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
       <Shell

@@ -12,7 +12,7 @@ class CarouselWrapper extends Component {
             query {
               images: allFile(
                 filter: { sourceInstanceName: { eq: "images-carousel" } }
-                sort: { fields: id, order: ASC }
+                sort: { fields: modifiedTime, order: DESC }
               ) {
                 edges {
                   node {

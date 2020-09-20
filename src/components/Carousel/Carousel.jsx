@@ -29,7 +29,7 @@ class Carousel extends Component {
         <Slider
           ref={c => (this.slider = c)}
           autoplay={true}
-          autoplaySpeed={3000}
+          autoplaySpeed={2500}
           slidesToShow={5}
           draggable={true}
           swipeToSlide={true}
@@ -99,27 +99,27 @@ const ImgWrapper = styled.section`
     padding: 10px 12%;
   }
 `
-const SliderButtonContainer = styled.div`
-  display: block;
-  margin: 0 auto;
-  width: 10%;
-  height: 10vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @media (max-width: 1024px) {
-    visibility: hidden;
-  }
-`
+// const SliderButtonContainer = styled.div`
+//   display: block;
+//   margin: 0 auto;
+//   width: 10%;
+//   height: 10vh;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   @media (max-width: 1024px) {
+//     visibility: hidden;
+//   }
+// `
 
-const Button = styled.h1`
-  height: auto;
-  width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-  font-size: 35px;
-  cursor: pointer;
-  user-select: none;
-`
+// const Button = styled.h1`
+//   height: auto;
+//   width: auto;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-weight: 700;
+//   font-size: 35px;
+//   cursor: pointer;
+//   user-select: none;
+// `
