@@ -51,10 +51,10 @@ const CardThumbnail = styled.div`
   width: 100%;
   position: relative;
   transition: 0.2s ease-in;
-  filter: grayscale(80%);
+  /* filter: grayscale(80%); */
 
   &:hover {
-    filter: grayscale(0%);
+    /* filter: grayscale(0%); */
   }
 
   &:hover > h1 {
@@ -90,7 +90,7 @@ const Overlay = styled.div`
 const OverlayText = styled.h1`
   position: absolute;
   width: auto;
-  font-size: 3vw;
+  font-size: 3.5vw;
   width: 60%;
   bottom: 8%;
   left: 8%;

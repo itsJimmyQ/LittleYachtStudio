@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Slider from "react-slick"
 import "./slick.css"
 import "./slick-theme.css"
-import ImgContainer from "../ImgContainer"
+import ImgContainer from "../gallery/ImgContainer"
 
 class Carousel extends Component {
   constructor(props) {

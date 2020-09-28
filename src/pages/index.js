@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import styled from "styled-components"
 
 import Shell from "../components/Shell"
-import Showcase from "../components/Showcase"
+import Showcase from "../components/gallery/Showcase"
 import Contact from "../components/Contact"
 import CarouselWrapper from "../components/Carousel/CarouselWrapper"
 
@@ -16,7 +16,7 @@ class indexPage extends Component {
       >
         <Wrapper>
           <Heading>
-            A photography firm based in
+            A freelance photographer based in
             <br />
             <Bold>Eindhoven, The Netherlands.</Bold>
           </Heading>

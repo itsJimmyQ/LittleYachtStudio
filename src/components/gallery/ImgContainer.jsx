@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import Zoom from "react-medium-image-zoom"
-import "../../node_modules/react-medium-image-zoom/dist/styles.css"
+import "../../../node_modules/react-medium-image-zoom/dist/styles.css"
 
 class ImgContainer extends Component {
   render() {

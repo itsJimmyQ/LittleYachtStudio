@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 
 import Header from "./header/Header"
 import SEO from "./seo"
-import Footer from "./Footer"
+import Footer from "./footer/Footer"
 
 class Shell extends Component {
   componentDidMount() {

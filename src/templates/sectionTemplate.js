@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
-import Gallery from "../components/Gallery"
+import Gallery from "../components/gallery/Gallery"
 import Shell from "../components/Shell"
 
 export default function Template({ data }) {

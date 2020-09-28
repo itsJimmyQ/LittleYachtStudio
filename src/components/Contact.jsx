@@ -8,8 +8,9 @@ class Contact extends Component {
         <Wrapper>
           <Heading> Contact us! </Heading>
           <Description>
-            We are more than happy to answer any inquiry or collaboration
-            request within one working day using the contacts below.
+            We are eager to collaborate with businesses are in need of
+            professional, creative photos! Send us an inquiry and we will reply
+            within 24 hours.
           </Description>
           <ContactSubsection>
             <ContactDetail>
