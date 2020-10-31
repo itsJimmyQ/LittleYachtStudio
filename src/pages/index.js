@@ -21,7 +21,6 @@ class indexPage extends Component {
             <Bold>Eindhoven, The Netherlands.</Bold>
           </Heading>
         </Wrapper>
-        {/* <CarouselWrapper /> */}
         <Wrapper>
           <Subheading ref={h1 => (this.heading = h1)}>Recent Works</Subheading>
           <Showcase />
