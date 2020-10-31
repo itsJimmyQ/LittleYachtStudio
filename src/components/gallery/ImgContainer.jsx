@@ -45,4 +45,5 @@ const Container = styled.div`
   div:focus {
     border: none;
   }
+  border: none;
 `
