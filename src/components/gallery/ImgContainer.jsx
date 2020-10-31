@@ -8,17 +8,14 @@ class ImgContainer extends Component {
   render() {
     const { image, height, ifZoom, loading } = this.props
     return (
-      <Container
-        ifZoom={ifZoom}
-        style={{ height }}
-        onContextMenu={e => e.preventDefault()}
-      >
+      <Container ifZoom={ifZoom} onContextMenu={e => e.preventDefault()}>
         {ifZoom && (
           <Zoom
             style={{
-              height: "100%",
+              height: "80%",
             }}
-            overlayBgColorEnd={"rgba(0, 0, 0, 0.6"}
+            zoomMargin={100}
+            overlayBgColorEnd={"rgba(0, 0, 0, 0.7"}
           >
             <Img loading={loading || "auto"} fluid={image} fadeIn={true} />
           </Zoom>
@@ -32,8 +29,8 @@ class ImgContainer extends Component {
 export default ImgContainer
 
 const Container = styled.div`
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
   background-color: #eee;
   border-radius: 3px;
   cursor: ${props => (props.ifZoom ? "pointer" : "default")};
@@ -44,5 +41,8 @@ const Container = styled.div`
     height: 100%;
     width: 100%;
     border-radius: 3px;
+  }
+  div:focus {
+    border: none;
   }
 `

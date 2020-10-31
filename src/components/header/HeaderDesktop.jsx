@@ -51,7 +51,7 @@ const ContainerDesktop = styled.div`
   justify-content: space-between;
   height: 12vh;
   width: 100%;
-  padding: 0 6%;
+  padding: 0 5%;
   transition: 0.3s ease;
   @media (max-width: 1024px) {
     padding: 0 10%;

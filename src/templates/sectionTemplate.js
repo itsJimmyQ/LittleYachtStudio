@@ -33,7 +33,7 @@ export const pageQuery = graphql`
         node {
           id
           childImageSharp {
-            fluid(quality: 80) {
+            fluid(quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -57,7 +57,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 90%;
   margin-bottom: 5vh;
 `
 

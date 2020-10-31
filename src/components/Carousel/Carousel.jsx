@@ -63,7 +63,6 @@ class Carousel extends Component {
                 <ImgContainer
                   key={node.id}
                   image={image.fluid}
-                  height={"60vh"}
                   ifZoom={false}
                   loading={"lazy"}
                 />
@@ -71,10 +70,6 @@ class Carousel extends Component {
             )
           })}
         </Slider>
-        {/* <SliderButtonContainer>
-          <Button onClick={this.onClickPrev}>👈🏻</Button>
-          <Button onClick={this.onClickNext}>👉🏻</Button>
-        </SliderButtonContainer> */}
       </Container>
     )
   }

@@ -25,7 +25,7 @@ class Showcase extends Component {
                       title
                       thumbnail {
                         childImageSharp {
-                          fluid(quality: 90) {
+                          fluid(quality: 80) {
                             ...GatsbyImageSharpFluid
                           }
                         }
