@@ -9,8 +9,8 @@ class Contact extends Component {
           <Heading> Contact us! </Heading>
           <Description>
             We are eager to collaborate with businesses are in need of
-            professional, creative photos! Send us an inquiry and we will reply
-            within 24 hours.
+            professional, creative digital content! Send us an inquiry and we
+            will reply within 24 hours.
           </Description>
           <ContactSubsection>
             <ContactDetail>
