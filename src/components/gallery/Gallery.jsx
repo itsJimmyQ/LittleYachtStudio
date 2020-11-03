@@ -7,8 +7,9 @@ class Gallery extends Component {
   render() {
     const { imgEdges } = this.props
     const breakpointColumnsObj = {
-      default: 3,
-      1600: 2,
+      default: 4,
+      1600: 3,
+      1200: 3,
       800: 1,
     }
     return (
