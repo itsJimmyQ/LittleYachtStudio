@@ -68,7 +68,7 @@ const Heading = styled.h1`
     font-size: 5vw;
     line-height: 25px;
     justify-self: center;
-    text-align: center;
+    text-align: left;
   }
 `
 const Subheading = styled.h2`

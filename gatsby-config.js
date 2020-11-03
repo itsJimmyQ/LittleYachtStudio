@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Little Yacht studio`,
-    description: `An Interior & Lifestyle photograher based in Eindhoven, The Netherlands.`,
+    description: `An Freelance Photograher based in Eindhoven, The Netherlands.`,
     author: `iamjimmyqian`,
     siteName: `Little Yacht studio`,
     siteUrl: `https://littleyacht.studio/`,
