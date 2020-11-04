@@ -14,15 +14,14 @@ class Footer extends Component {
             </Anchor>
           </LogoContainer>
           <InfoSection>
-            {/* <Info> (+31) 0636 067 350 </Info> */}
+            <Info> KvK: 74389831</Info>
+            <Info />
             <Info> Eindhoven, The Netherlands. </Info>
-            {/* <Info> littleyachtstudio@gmail.com </Info> */}
             <Info>
-              {" "}
               Created by{" "}
               <a href="https://www.instagram.com/iamjimmyqian">
                 Longxiang Qian
-              </a>{" "}
+              </a>
             </Info>
           </InfoSection>
         </Wrapper>
@@ -91,14 +90,6 @@ const InfoSection = styled.section`
 const Info = styled.h3`
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1em;
+  font-size: clamp(14px, 2vw, 17px);
   margin-bottom: 0px;
-
-  @media (max-width: 1024px) {
-    font-size: 2vw;
-  }
-  @media (max-width: 414px) {
-    font-size: 3.5vw;
-    /* font-weight: 600; */
-  }
 `

@@ -43,7 +43,7 @@ class Showcase extends Component {
               const image = frontmatter.thumbnail.childImageSharp
               return (
                 <SectionCard
-                  key={node.id}
+                  key={index}
                   elKey={node.id}
                   heading={frontmatter.title}
                   image={image.fluid}
@@ -65,7 +65,7 @@ const Container = styled.section`
   display: grid;
   height: auto;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-row-gap: 5vh;
   grid-column-gap: 10vw;
 

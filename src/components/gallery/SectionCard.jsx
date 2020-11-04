@@ -90,7 +90,7 @@ const Overlay = styled.div`
 const OverlayText = styled.h1`
   position: absolute;
   width: auto;
-  font-size: 3.5vw;
+  font-size: 4vw;
   width: 60%;
   bottom: 8%;
   left: 8%;
@@ -102,7 +102,6 @@ const OverlayText = styled.h1`
   line-height: 1em;
   user-select: none;
   @media (max-width: 1024px) {
-    /* visibility: hidden; */
     line-height: 1em;
     opacity: 1;
     font-weight: 600;

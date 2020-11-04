@@ -78,36 +78,18 @@ const Wrapper = styled.div`
 const Heading = styled.h1`
   color: white;
   font-weight: 600;
-  font-size: 2em;
+  font-size: clamp(20px, 2.4vw, 30px);
   margin-bottom: 10px;
-
-  @media (max-width: 1024px) {
-    font-size: 4.5vw;
-  }
-
-  @media (max-width: 414px) {
-    font-size: 6vw;
-  }
 `
 
 const Description = styled.p`
   color: white;
   font-weight: 300;
-  font-size: 1.1em;
-  width: 60%;
+  font-size: clamp(14px, 2vw, 17px);
+  width: 100%;
   line-height: 1.5em;
   div {
     color: white;
-  }
-
-  @media (max-width: 1024px) {
-    width: 100%;
-    font-size: 2vw;
-  }
-
-  @media (max-width: 414px) {
-    width: 100%;
-    font-size: 3.5vw;
   }
 `
 const ContactSubsection = styled.div`
@@ -129,27 +111,14 @@ const ContactSubsection = styled.div`
 `
 
 const Label = styled.label`
-  font-size: 0.9em;
+  font-size: clamp(12px, 1.8vw, 15px);
   color: white;
-  opacity: 0.4;
+  opacity: 0.35;
   font-weight: 500;
-  @media (max-width: 1366px) {
-    font-size: 2vw;
-    text-decoration: none;
-  }
-
-  @media (max-width: 1024px) {
-    font-size: 1.5vw;
-  }
-
-  @media (max-width: 414px) {
-    font-size: 3vw;
-    text-decoration: none;
-  }
 `
 const Info = styled.h3`
   font-family: "Montserrat", sans-serif;
-  font-size: 1em;
+  font-size: clamp(14px, 2vw, 17px);
   color: white;
   font-weight: 300;
   cursor: pointer;
@@ -161,7 +130,7 @@ const Info = styled.h3`
   a {
     text-decoration: none;
   }
-  @media (max-width: 1366px) {
+  /* @media (max-width: 1366px) {
     font-size: 3vw;
     text-decoration: none;
   }
@@ -173,8 +142,8 @@ const Info = styled.h3`
 
   @media (max-width: 414px) {
     font-size: 3.5vw;
-    text-decoration: none;
-  }
+    text-decoration: none; 
+  }*/
 `
 
 const ContactDetail = styled.div`

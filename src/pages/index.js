@@ -15,9 +15,8 @@ class indexPage extends Component {
       >
         <Wrapper>
           <Heading>
-            A freelance photographer based in
-            <br />
-            <Bold>Eindhoven, The Netherlands.</Bold>
+            A Freelance Photographer Based in
+            <Bold> Eindhoven, The Netherlands.</Bold>
           </Heading>
         </Wrapper>
         <Wrapper>
@@ -44,7 +43,7 @@ const Wrapper = styled.div`
 
 const Heading = styled.h1`
   font-family: "Poppins", sans-serif;
-  font-size: 3em;
+  font-size: clamp(20px, 4vw, 50px);
   font-weight: 400;
   color: #28282a;
   justify-self: flex-start;
@@ -52,50 +51,15 @@ const Heading = styled.h1`
   margin-top: 14vh;
   display: relative;
   z-index: -9;
-
-  @media (max-width: 1366px) {
-    font-size: 4vw;
-    text-decoration: none;
-  }
-
-  @media (max-width: 1024px) {
-    font-weight: 300;
-    font-size: 3vw;
-    text-align: left;
-  }
-
-  @media (max-width: 414px) {
-    font-size: 5vw;
-    line-height: 25px;
-    justify-self: center;
-    text-align: left;
-  }
 `
 const Subheading = styled.h2`
   font-family: "Poppins", sans-serif;
-  font-size: 2em;
+  font-size: clamp(20px, 2.4vw, 30px);
   font-weight: 400;
   justify-self: flex-start;
   margin-bottom: 2vh;
   display: flex;
   z-index: -9;
-
-  @media (max-width: 1366px) {
-    font-size: 4vw;
-    text-decoration: none;
-  }
-
-  @media (max-width: 1024px) {
-    font-size: 3vw;
-    text-align: center;
-    font-weight: 500;
-  }
-
-  @media (max-width: 414px) {
-    font-size: 5vw;
-    justify-self: center;
-    text-align: center;
-  }
 `
 
 const Bold = styled.span`
