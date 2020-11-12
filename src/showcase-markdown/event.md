@@ -1,10 +1,10 @@
 ---
 path: "/Projects/Event"
-date: "2020-03-20"
-title: "Event"
+date: "1584030449"
+cardTitle: "Event"
+cardDesc: " "
+pageTitle: "Event"
 description: "Photographs from different events with a variety of themes. "
-key: "event"
-thumbnail: "../images/thumbnail/04.jpg"
+thumbnail: "../images/thumbnail/event.jpg"
 imgKey: "images-event"
-sortKey: "4"
 ---

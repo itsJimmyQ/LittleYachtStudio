@@ -20,7 +20,7 @@ class indexPage extends Component {
           </Heading>
         </Wrapper>
         <Wrapper>
-          <Subheading ref={h1 => (this.heading = h1)}>Recent Works</Subheading>
+          <Subheading>Recent Works</Subheading>
           <Showcase />
         </Wrapper>
         <Contact />

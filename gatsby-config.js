@@ -32,7 +32,7 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `src/images/icon/logo.png`,
+        icon: `src/images/icons/logo.png`,
       },
     },
     {
@@ -65,8 +65,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images-commercial`,
-        path: `${__dirname}/src/images/commercial`,
+        name: `images-product`,
+        path: `${__dirname}/src/images/product`,
       },
     },
     {
@@ -76,18 +76,43 @@ module.exports = {
         path: `${__dirname}/src/images/event`,
       },
     },
+    // Soo Tea
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `showcase-pages`,
-        path: `${__dirname}/src/showcase-markdown`,
+        name: `soo-tea`,
+        path: `${__dirname}/src/images/soo-tea`,
+      },
+    },
+    // Good Tea Stories
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `tea-stories`,
+        path: `${__dirname}/src/images/tea-stories`,
+      },
+    },
+    // CHUN Amsterdam
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `chun`,
+        path: `${__dirname}/src/images/chun`,
+      },
+    },
+    // TSH Eindhoven
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `tsh-eindhoven`,
+        path: `${__dirname}/src/images/tsh-eindhoven`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images-carousel`,
-        path: `${__dirname}/src/images/carousel`,
+        name: `showcase-pages`,
+        path: `${__dirname}/src/showcase-markdown`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

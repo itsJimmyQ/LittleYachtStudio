@@ -1,10 +1,10 @@
 ---
 path: "/Projects/Urban"
-date: "2020-03-20"
-title: "Street & Architecture"
+date: "1601828849"
+cardTitle: "Street & Architecture"
+cardDesc: " "
+pageTitle: "Street & Architecture"
 description: "Some of our favourite architectural structures and street moments captured."
-key: "urban"
-thumbnail: "../images/thumbnail/03.jpg"
+thumbnail: "../images/thumbnail/urban.jpg"
 imgKey: "images-urban"
-sortKey: "3"
 ---

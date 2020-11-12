@@ -1,10 +1,11 @@
 ---
 path: "/Projects/Portrait"
-date: "2020-03-20"
+date: "1603988849"
 title: "Portraiture"
+cardTitle: "Portraiture"
+cardDesc: " "
+pageTitle: "Portraiture"
 description: "Our favourite shots of portrature."
-key: "portrait"
-thumbnail: "../images/thumbnail/01.jpg"
+thumbnail: "../images/thumbnail/portrait.jpg"
 imgKey: "images-portrait"
-sortKey: "1"
 ---

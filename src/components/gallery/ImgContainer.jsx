@@ -14,7 +14,7 @@ class ImgContainer extends Component {
             style={{
               height: "80%",
             }}
-            zoomMargin={100}
+            zoomMargin={50}
             overlayBgColorEnd={"rgba(0, 0, 0, 0.7"}
           >
             <Img loading={loading || "auto"} fluid={image} fadeIn={true} />

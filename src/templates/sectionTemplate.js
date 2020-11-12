@@ -15,7 +15,7 @@ export default function Template({ data }) {
       bottomCheck={true}
     >
       <Wrapper>
-        <Heading>{frontmatter.title}</Heading>
+        <Heading>{frontmatter.pageTitle}</Heading>
         <Desc>{frontmatter.description}</Desc>
         <Gallery imgEdges={images.edges} />
       </Wrapper>
@@ -33,7 +33,7 @@ export const pageQuery = graphql`
         node {
           id
           childImageSharp {
-            fluid(quality: 80) {
+            fluid(quality: 90) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -43,9 +43,9 @@ export const pageQuery = graphql`
     markdowns: markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date
         path
-        title
+        pageTitle
         description
         imgKey
       }
@@ -62,39 +62,18 @@ const Wrapper = styled.div`
 `
 
 const Heading = styled.h1`
-  font-family: "Poppins", sans-serif;
-  font-size: 2em;
-  font-weight: 400;
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 600;
   color: #28282a;
   justify-self: flex-start;
   line-height: 1.2em;
   padding-top: 14vh;
-  margin-bottom: 1vh;
-
-  @media (max-width: 1024px) {
-    font-size: 3vw;
-    text-align: center;
-  }
-
-  @media (max-width: 414px) {
-    font-size: 5.5vw;
-  }
 `
 
 const Desc = styled.p`
   font-family: "Montserrat", sans-serif;
-  font-size: 1em;
+  font-size: clamp(14px, 2vw, 16px);
   font-weight: 500;
   display: flex;
   margin-bottom: 4vh;
-
-  @media (max-width: 1024px) {
-    text-align: center;
-    font-size: 2vw;
-  }
-
-  @media (max-width: 414px) {
-    font-size: 3.5vw;
-    margin-bottom: 3vh;
-  }
 `

@@ -22,7 +22,14 @@ class Gallery extends Component {
           {imgEdges.map((edge, index) => {
             const node = edge.node
             const fluid = node.childImageSharp.fluid
-            return <ImgContainer key={index} image={fluid} ifZoom={true} />
+            return (
+              <ImgContainer
+                key={index}
+                image={fluid}
+                ifZoom={true}
+                loading={"lazy"}
+              />
+            )
           })}
         </Masonry>
       </Container>
@@ -33,7 +40,6 @@ class Gallery extends Component {
 export default Gallery
 
 const Container = styled.section`
-  display: grid;
   height: auto;
   width: 100%;
 `

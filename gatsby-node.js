@@ -40,7 +40,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       path: node.frontmatter.path,
       component: sectionTemplate,
       context: {
-        imgKey: node.frontmatter.imgKey,
+        imgKey: node.frontmatter.imgKey, // Pass in image key for that page
       }, // additional data can be passed via context
     })
   })

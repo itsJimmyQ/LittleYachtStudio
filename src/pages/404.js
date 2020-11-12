@@ -6,7 +6,9 @@ import Shell from "../components/Shell"
 const NotFoundPage = () => (
   <Shell title={"404"} headerLinks={["HOME", "CONTACT"]} bottomCheck={true}>
     <Container>
-      <Heading>404: Oops🤭</Heading>
+      <Heading>
+        404: Oops<span>🤭</span>
+      </Heading>
       <SubHeading>I believe you are looking into the wrong place👻</SubHeading>
     </Container>
   </Shell>
