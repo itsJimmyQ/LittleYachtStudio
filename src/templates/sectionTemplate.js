@@ -68,6 +68,7 @@ const Heading = styled.h1`
   justify-self: flex-start;
   line-height: 1.2em;
   padding-top: 14vh;
+  margin-bottom: 4px;
 `
 
 const Desc = styled.p`
