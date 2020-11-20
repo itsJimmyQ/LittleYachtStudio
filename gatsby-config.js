@@ -108,6 +108,14 @@ module.exports = {
         path: `${__dirname}/src/images/tsh-eindhoven`,
       },
     },
+    // Rustic Pastry shop
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `rustic`,
+        path: `${__dirname}/src/images/rustic`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
