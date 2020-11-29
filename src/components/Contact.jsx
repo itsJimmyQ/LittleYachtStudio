@@ -77,7 +77,7 @@ const Wrapper = styled.div`
 
 const Heading = styled.h1`
   color: white;
-  font-weight: 600;
+  font-weight: 400;
   font-size: clamp(20px, 2.4vw, 30px);
   margin-bottom: 10px;
 `
