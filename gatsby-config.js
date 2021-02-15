@@ -116,6 +116,14 @@ module.exports = {
         path: `${__dirname}/src/images/rustic`,
       },
     },
+    // Sushiholic
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `sushiholic`,
+        path: `${__dirname}/src/images/sushiholic`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
