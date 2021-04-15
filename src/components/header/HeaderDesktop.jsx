@@ -68,9 +68,9 @@ const LogoAlt = styled.h1`
   /* color: black; */
   margin: 0;
   font-weight: 300;
-  font-size: 2em;
+  font-size: 1.5em;
   @media (max-width: 1024px) {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
   @media (max-width: 414px) {
     font-size: 6vw;
