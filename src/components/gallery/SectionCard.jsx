@@ -86,11 +86,10 @@ const CardThumbnail = styled.div`
 const CardContent = styled.div`
   height: 15%;
   width: 100%;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 32px;
 
   @media (max-width: 1024px) {
     padding: 0 16px;
