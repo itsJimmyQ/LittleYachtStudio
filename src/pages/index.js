@@ -15,8 +15,9 @@ class indexPage extends Component {
       >
         <Wrapper>
           <Heading>
-            A Freelance Photographer Based in
-            <Bold> Eindhoven, The Netherlands.</Bold>
+            <Bold>A freelance photographer</Bold> based in
+            <br />
+            Eindhoven, The Netherlands.
           </Heading>
         </Wrapper>
         <Wrapper>
@@ -35,26 +36,26 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
-  margin-bottom: 5vh;
+  margin-bottom: 25vh;
   @media (max-width: 1024px) {
-    margin-bottom: 3vh;
+    margin-bottom: 15vh;
   }
 `
 
 const Heading = styled.h1`
   font-family: "Poppins", sans-serif;
-  font-size: clamp(20px, 4vw, 50px);
+  font-size: clamp(20px, 2.5vw, 42px);
   font-weight: 400;
   color: #28282a;
   justify-self: flex-start;
   line-height: 1.2em;
-  margin-top: 14vh;
+  margin-top: 20vh;
   display: relative;
   z-index: -9;
 `
 const Subheading = styled.h2`
   font-family: "Poppins", sans-serif;
-  font-size: clamp(20px, 2.4vw, 30px);
+  font-size: clamp(20px, 2vw, 30px);
   font-weight: 400;
   justify-self: flex-start;
   margin-bottom: 2vh;

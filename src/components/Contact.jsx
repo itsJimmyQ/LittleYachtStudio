@@ -63,7 +63,7 @@ export default Contact
 
 const Container = styled.section`
   background-color: #28282a;
-  height: 75vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -78,7 +78,7 @@ const Wrapper = styled.div`
 const Heading = styled.h1`
   color: white;
   font-weight: 400;
-  font-size: clamp(20px, 2.4vw, 30px);
+  font-size: clamp(20px, 2vw, 30px);
   margin-bottom: 10px;
 `
 

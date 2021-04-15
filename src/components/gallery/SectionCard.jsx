@@ -45,7 +45,7 @@ class SectionCard extends Component {
 export default SectionCard
 
 const Container = styled.div`
-  height: 65vh;
+  height: 70vh;
   width: 100%;
   z-index: 9;
   display: flex;
@@ -73,7 +73,7 @@ const Container = styled.div`
 `
 
 const CardThumbnail = styled.div`
-  height: 85%;
+  height: 80%;
   width: 100%;
   position: relative;
   transition: 0.2s ease-in;
@@ -84,17 +84,13 @@ const CardThumbnail = styled.div`
 `
 
 const CardContent = styled.div`
-  height: 15%;
+  height: 20%;
   width: 100%;
   /* background-color: #f9f9f9; */
   display: flex;
   justify-content: center;
-  align-items: center;
-
-  @media (max-width: 1024px) {
-    padding: 0 16px;
-    height: 20%;
-  }
+  align-items: flex-start;
+  padding-top: 16px;
 `
 
 const CardTitle = styled.h2`

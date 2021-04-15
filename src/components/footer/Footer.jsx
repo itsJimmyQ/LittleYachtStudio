@@ -33,6 +33,7 @@ class Footer extends Component {
 export default Footer
 
 const Container = styled.section`
+  min-height: 250px;
   height: 25vh;
   width: 100%;
   background-color: white;
