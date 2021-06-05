@@ -124,6 +124,14 @@ module.exports = {
         path: `${__dirname}/src/images/sushiholic`,
       },
     },
+    // car
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `Car`,
+        path: `${__dirname}/src/images/car`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
