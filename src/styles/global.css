@@ -26,13 +26,19 @@ b {
   display: -ms-flexbox; /* Not needed if autoprefixing */
   display: flex;
   width: 100%;
+  gap: 15px;
 }
 .masonry-grid_column {
-  padding: 0 15px;
   background-clip: padding-box;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 .masonry-grid_column > div {
-  margin-bottom: 30px;
   background-color: transparent;
   padding: none;
+}
+
+.gatsby-image-wrapper {
+  border-radius: 0 !important;
 }

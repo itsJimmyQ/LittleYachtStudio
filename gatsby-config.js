@@ -132,6 +132,14 @@ module.exports = {
         path: `${__dirname}/src/images/car`,
       },
     },
+    // Choi Kimchi
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `choi-kimchi`,
+        path: `${__dirname}/src/images/choi-kimchi`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
